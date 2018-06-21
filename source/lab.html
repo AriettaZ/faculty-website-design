@@ -1,0 +1,110 @@
+<div class="container">
+  <%= image_tag 'rerout-sg.jpg' %>
+  <p>The <a href="http://web.cse.ohio-state.edu/~stewart.962/rerout.html">ReRout Lab</a>uses computer systems research to broaden participation in computer science.  Our premise is that novel, high-impact systems excite students, reach new classes of users, and demand diverse, out-of-the-box thinking.  The following principles guide our work:</p>
+  <ul>
+    <li>Motivating and training the next generation of systems builders is paramount</li>
+    <li>Real, open, and usable systems prototypes have big impact</li>
+    <li>Well-solved research problems can qualitatively change a user's interaction with their computer</li>
+  </ul>
+  <p>
+    <strong>I am currently looking for students. If you have already applied to OSU and you want to join the ReRout Lab, send me an email with your CV. Note, admission to OSU is highly selective. I can not reply to all good candidates.</strong>
+  </p>
+</div>
+<div>
+  <h2>People</h2>
+  <div>
+  <ul>
+    <% phdStudent.each do |student| %>
+    <li><span><%= student.name %></span>,<a href='<%= student.page %>'>webpage</a>
+      <p><%= student.intro %></p>
+    </li>
+    <% end %>
+  </ul>
+  <ul>
+    <% masterStudent.each do |student| %>
+    <li><span><%= student.name %></span>, <span><%= student.intro %></span>
+    </li>
+    <% end %>
+  </ul>
+  <ul>
+    <% undergdStudent.each do |student| %>
+    <li><span><%= student.name %></span>, <span><%= student.intro %></span>
+    </li>
+    <% end %>
+  </ul>
+  <ul>
+    <% intermStudent.each do |student| %>
+    <li><span><%= student.name %></span>, <span><%= student.intro %></span>
+    </li>
+    <% end %>
+  </ul>
+  </div>
+
+  <div class="carousel-container">
+  <h2>Projects</h2>
+  <div class="carousel my-carousel carousel--translate">
+    <input class="carousel__activator" type="radio" name="carousel" id="F" checked="checked"/>
+    <input class="carousel__activator" type="radio" name="carousel" id="G"/>
+    <input class="carousel__activator" type="radio" name="carousel" id="H"/>
+    <input class="carousel__activator" type="radio" name="carousel" id="I"/>
+    <input class="carousel__activator" type="radio" name="carousel" id="J"/>
+    <div class="carousel__controls">
+      <label class="carousel__control carousel__control--backward" for="J"></label>
+      <label class="carousel__control carousel__control--forward" for="G"></label>
+    </div>
+    <div class="carousel__controls">
+      <label class="carousel__control carousel__control--backward" for="F"></label>
+      <label class="carousel__control carousel__control--forward" for="H"></label>
+    </div>
+    <div class="carousel__controls">
+      <label class="carousel__control carousel__control--backward" for="G"></label>
+      <label class="carousel__control carousel__control--forward" for="I"></label>
+    </div>
+    <div class="carousel__controls">
+      <label class="carousel__control carousel__control--backward" for="H"></label>
+      <label class="carousel__control carousel__control--forward" for="J"></label>
+    </div>
+    <div class="carousel__controls">
+      <label class="carousel__control carousel__control--backward" for="I"></label>
+      <label class="carousel__control carousel__control--forward" for="F"></label>
+    </div>
+    <div class="carousel__track">
+      <li class="carousel__slide">
+        <h1>Quality Aware Management</h1>
+        <div class="">
+          <p>(Supported by: NSF CSR SMALL )
+(Collaborators: Microsoft Research, Oak Ridge National Labs, Morehouse College, NCWIT, OSU Office of Diversity and Inclusion ) </p>
+
+<p>Research Challenge:
+For many next generation services, data will grow much faster than processing capacity.  These services will access only a portion of the data relevant to a user's query.  Our research helps services automatically 1) identify the most valuable data for each user request and 2) ensure it can be accessed readily and cost effectively.  Thus far, we have focused on natural language processing services, e.g., search engines and question-answering systems.  For a specific user request, NL data often contains redundancies, e.g., multiple web pages with the same information or multiple word phrases with same meaning.  These redundancies can crowd out useful data causing to NLP services to produce poor quality results.  Our contribution is systems support to measure quality for distributed services and, subsequently, manage resources cost effectively within quality constraints.
+</p>
+<p>
+Recommended Reading:
+Cache Provisioning for Interactive NLP Services, LADiS 2013
+Balanced and Predictable Networked Storage, DCPerf 2013
+</p>
+        </div>
+      </li>
+      <li class="carousel__slide">
+        <h1>G</h1>
+      </li>
+      <li class="carousel__slide">
+        <h1>H</h1>
+      </li>
+      <li class="carousel__slide">
+        <h1>I</h1>
+      </li>
+      <li class="carousel__slide">
+        <h1>J</h1>
+      </li>
+    </div>
+    <div class="carousel__indicators">
+      <label class="carousel__indicator" for="F"></label>
+      <label class="carousel__indicator" for="G"></label>
+      <label class="carousel__indicator" for="H"></label>
+      <label class="carousel__indicator" for="I"></label>
+      <label class="carousel__indicator" for="J"></label>
+    </div>
+  </div>
+</div>
+</div>
