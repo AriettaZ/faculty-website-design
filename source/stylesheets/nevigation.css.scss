@@ -1,0 +1,151 @@
+
+.navbar {
+    // spacing for sitenav since it's out of the flow (pos fixed)
+    margin-bottom: 39px;
+}
+
+// formatting navigation bar (ul)
+#sitenav {
+    list-style-type: none;
+    margin: 0;
+    margin-left: -200px;
+    padding: 0;
+    position: fixed;
+    overflow: auto;
+    width: 100%;
+    top: 0;
+    background-color: #333;
+    li {
+        float: left;
+        //display: inline;
+        a {
+            color: white;
+            //background-color: #333;
+            text-align: center;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+        }
+        a:hover {
+            background-color: #111;
+            border-bottom-width: 1px solid red;
+        }
+    }
+}
+
+
+
+#bio-pic div {
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 3;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.content p {
+    text-align: left;
+}
+
+.outer {
+    height: 100%;
+    width: 100%;
+    display: table;
+    vertical-align: middle;
+}
+
+.container {
+    position: relative;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.inner {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+// Contact page style below + .outer, .container
+.center {
+    margin: 0px auto;
+    display: table;
+}
+
+#info-links img {
+    height: 1em;
+    width: 1em;
+}
+
+#info-links p {
+    text-align: center;
+}
+
+//Set the slider
+.slider {
+    width: 550px;
+    position: relative;
+    padding-top: 300px; //Helps bring the labels down
+    margin: auto;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+//Set the image display
+.slider>img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+// display the complete image in the slider
+.object-fit_contain {
+    object-fit: contain
+}
+
+.slider img[class] {
+    width: 100%;
+}
+
+//Set the default display of thumbnails
+.slider label {
+    margin: 18px 0 0 18px;
+    border: 3px solid #999;
+    float: left;
+    cursor: pointer;
+    transition: all 0.5s;
+    opacity: 0.6;
+}
+
+//Set the image display of thumbnails
+.slider label img {
+    display: block;
+    height: 50px;
+}
+
+//Set the radio selection invisible
+.slider input[name='slide_switch'] {
+    display: none;
+}
+
+//Click effects
+.slider input[name='slide_switch']:checked+label {
+    border-color: #666;
+    opacity: 1;
+}
+
+//Unclicked images will be hidden
+.slider input[name='slide_switch']~img {
+    visibility: hidden;
+}
+
+// Clicking the thumbnail will be displayed the image
+.slider input[name='slide_switch']:checked+label+img {
+    visibility: visible;
+}
