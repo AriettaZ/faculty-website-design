@@ -1,4 +1,9 @@
 body {
+    margin: 0;
+    padding: 0;
+}
+/*
+body {
   background-color: #fbc547;
   color: #333;
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
@@ -17,8 +22,58 @@ a {
     color: rgba(#000, 0.6);
   }
 }
+*/
 
+.navbar {
+  // spacing for sitenav since it's out of the flow (pos fixed)
+  margin-bottom: 39px;
+}
+
+// formatting navigation bar (ul)
+#sitenav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  overflow: auto;
+  width: 100%;
+  top: 0;
+  background-color: #333;
+  li {
+    float: left;
+    //display: inline;
+    a {
+      color: white;
+      //background-color: #333;
+      text-align: center;
+      padding: 10px 20px;
+      display: block;
+      text-decoration: none;
+    }
+    a:hover {
+      background-color: #111;
+      border-bottom-width: 1px solid red;
+    }
+  }
+}
+
+#footer{
+  height: 150px;
+  width: 100%;
+  background-color: #333;
+  p {
+    color: white;
+    padding: 50%;
+  }
+}
+/*
+.navbar::after:first-child {
+  clear:left
+}
+*/
+/*
 .middleman-logo {
   margin-bottom: 1rem;
   width: 10rem;
 }
+*/

@@ -1,9 +1,21 @@
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
+
+# use live reloading to reload page on file change
+activate :livereload
+
+# allow for specific layout page loading
+# page "/login.html", :layout => "admin"
+
+
+# allow reloading of css other than stylesheets/all.css
+# change to nil to reload all of page css
+# :livereload_css_target
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
