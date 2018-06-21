@@ -1,0 +1,31 @@
+<% require_relative '../lib/publication' %>
+<h1>Publications</h1>
+<a href="https://www.cs.rutgers.edu/~ricardob/note.html">CS publishing standards</a>
+<% data = Marshal.load File.read("../data/publication_data") %>
+<% data.keys.each do |year| %>
+	<div class="publication-year"><%= year.to_s %></div>
+	<table>
+	
+	<tr>
+		<th>title</th>
+		<th>authors</th>
+		<th>Event</th>
+		<th>Location</th>
+		<th colspan=\"4\">Link</th>
+	</tr>
+	
+	<% data[year].each do |publication| %>
+		<tr>
+			<td><%= publication.title %></td>
+			<td><%= publication.author_str %></td>"
+			<td><%= publication.event_name %></td>"
+			<td><%= publication.location %></td>"
+			<td><a href="<%= publication.pdf_link %>">pdf</a></td>"
+			<td><a href="<%= publication.ppt_link %>">ppt</a></td>"
+			<td><a href="<%= publication.bibtex_link %>">bibtex</a></td>"
+			<td><a href="<%= publication.event_link %>">event</a></td>"
+			</tr>"
+	<% end %>
+	
+	</table>
+<% end %>
