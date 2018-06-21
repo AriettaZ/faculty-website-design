@@ -11,14 +11,13 @@
   </p>
 </div>
 <div>
-  <h2>People</h2>
   <div>
     <% phdStudent =[{name:"Jayson Boubin",page:"https://www.linkedin.com/in/jayson-boubin-94a51a89/",intro:"Research Highlights: Winner CSE Departmental Fellowship"},
       {name:"Nathaniel Morris",page:"http://web.cse.ohio-state.edu/~morris.743/pages/about.html",intro:"Research Highlights: Ford Fellowship Honorable Mention, ICAC 2017 and SOSP 2017 Travel Grant, Developing novel models to predict response time under computational sprinting "}]%>
     <% masterStudent=[{name:"Siva Meenakshi Renganathan",intro:"2017, Apple"},{name:"Rashmi Rao",intro:"2017, Data scientist at Exact Software"}]%>
     <% undergdStudent =[{name:"Shiqi Zhang",intro:"2017"},{name:"Stephanie Mohammed",intro:"2016, Exact Software "}]%>
     <% intermStudent =[{name:"Onix Tarrat",intro:"SROP, 2017"},{name:"CeDale Smith",intro:"SROP, 2014"}]%>
-    <h2>PHD Students</h2>
+    <!-- <h2>PHD Students</h2>
   <ul>
     <% phdStudent.each do |student| %>
     <li><span><%= student[:name] %></span>,<a href='<%= student[:page]  %>'>webpage</a>
@@ -36,27 +35,24 @@
   <h2>Undergraduate Students</h2>
   <ul>
     <% undergdStudent.each do |student| %>
-    <li><span><%= student[:name] %></span>, <span><%= student[:intro] %></span>
-    </li>
+    <p><span><%= student[:name] %></span>, <span><%= student[:intro] %></span></p>
     <% end %>
   </ul>
   <h2>Summer Intern</h2>
   <ul>
     <% intermStudent.each do |student| %>
-    <li><span><%= student[:name] %></span>, <span><%= student[:intro] %></span>
-    </li>
+    <p><span><%= student[:name] %></span>, <span><%= student[:intro] %></span></p>
     <% end %>
-  </ul>
+  </ul> -->
   </div>
 
   <div class="carousel-container">
-  <h2>Projects</h2>
+  <h2>People</h2>
   <div class="carousel my-carousel carousel--translate">
     <input class="carousel__activator" type="radio" name="carousel" id="F" checked="checked"/>
     <input class="carousel__activator" type="radio" name="carousel" id="G"/>
     <input class="carousel__activator" type="radio" name="carousel" id="H"/>
     <input class="carousel__activator" type="radio" name="carousel" id="I"/>
-    <input class="carousel__activator" type="radio" name="carousel" id="J"/>
     <div class="carousel__controls">
       <label class="carousel__control carousel__control--backward" for="J"></label>
       <label class="carousel__control carousel__control--forward" for="G"></label>
@@ -73,10 +69,6 @@
       <label class="carousel__control carousel__control--backward" for="H"></label>
       <label class="carousel__control carousel__control--forward" for="J"></label>
     </div>
-    <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="I"></label>
-      <label class="carousel__control carousel__control--forward" for="F"></label>
-    </div>
     <div class="carousel__track">
       <li class="carousel__slide">
         <h2>PHD Students</h2>
@@ -92,10 +84,16 @@
           <% end %>
       </li>
       <li class="carousel__slide">
-        <h1>I</h1>
+        <h2>Undergraduate Students</h2>
+        <% undergdStudent.each do |student| %>
+        <p><span><%= student[:name] %></span>, <span><%= student[:intro] %></span></p>
+        <% end %>
       </li>
       <li class="carousel__slide">
-        <h1>J</h1>
+        <h2>Summer Intern</h2>
+        <% intermStudent.each do |student| %>
+        <p><span><%= student[:name] %></span>, <span><%= student[:intro] %></span></p>
+        <% end %>
       </li>
     </div>
     <div class="carousel__indicators">
