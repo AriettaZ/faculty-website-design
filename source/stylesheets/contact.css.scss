@@ -3,6 +3,11 @@
   text-align: left;
 }
 
+.content-container{
+  margin: 0px auto;
+  width: 80%;
+}
+
 .outer {
   height: 100%;
   width: 100%;
@@ -16,10 +21,10 @@
   display: table-cell;
 }
 
-.center {
-  margin: 0px auto;
-  display: table;
-}
+//.center {
+//margin: 0px auto;
+//display: table;
+//}
 
 //Set the slider
 .slider{
