@@ -11,14 +11,13 @@
   </p>
 </div>
 <div>
-  <h2>People</h2>
   <div>
     <% phdStudent =[{name:"Jayson Boubin",page:"https://www.linkedin.com/in/jayson-boubin-94a51a89/",intro:"Research Highlights: Winner CSE Departmental Fellowship"},
       {name:"Nathaniel Morris",page:"http://web.cse.ohio-state.edu/~morris.743/pages/about.html",intro:"Research Highlights: Ford Fellowship Honorable Mention, ICAC 2017 and SOSP 2017 Travel Grant, Developing novel models to predict response time under computational sprinting "}]%>
     <% masterStudent=[{name:"Siva Meenakshi Renganathan",intro:"2017, Apple"},{name:"Rashmi Rao",intro:"2017, Data scientist at Exact Software"}]%>
     <% undergdStudent =[{name:"Shiqi Zhang",intro:"2017"},{name:"Stephanie Mohammed",intro:"2016, Exact Software "}]%>
     <% intermStudent =[{name:"Onix Tarrat",intro:"SROP, 2017"},{name:"CeDale Smith",intro:"SROP, 2014"}]%>
-    <h2>PHD Students</h2>
+    <!-- <h2>PHD Students</h2>
   <ul>
     <% phdStudent.each do |student| %>
     <li><span><%= student[:name] %></span>,<a href='<%= student[:page]  %>'>webpage</a>
@@ -36,27 +35,24 @@
   <h2>Undergraduate Students</h2>
   <ul>
     <% undergdStudent.each do |student| %>
-    <li><span><%= student[:name] %></span>, <span><%= student[:intro] %></span>
-    </li>
+    <p><span><%= student[:name] %></span>, <span><%= student[:intro] %></span></p>
     <% end %>
   </ul>
   <h2>Summer Intern</h2>
   <ul>
     <% intermStudent.each do |student| %>
-    <li><span><%= student[:name] %></span>, <span><%= student[:intro] %></span>
-    </li>
+    <p><span><%= student[:name] %></span>, <span><%= student[:intro] %></span></p>
     <% end %>
-  </ul>
+  </ul> -->
   </div>
 
-  <!-- <div class="carousel-container">
-  <h2>Projects</h2>
+  <div class="carousel-container">
+  <h2>People</h2>
   <div class="carousel my-carousel carousel--translate">
     <input class="carousel__activator" type="radio" name="carousel" id="F" checked="checked"/>
     <input class="carousel__activator" type="radio" name="carousel" id="G"/>
     <input class="carousel__activator" type="radio" name="carousel" id="H"/>
     <input class="carousel__activator" type="radio" name="carousel" id="I"/>
-    <input class="carousel__activator" type="radio" name="carousel" id="J"/>
     <div class="carousel__controls">
       <label class="carousel__control carousel__control--backward" for="J"></label>
       <label class="carousel__control carousel__control--forward" for="G"></label>
@@ -73,55 +69,31 @@
       <label class="carousel__control carousel__control--backward" for="H"></label>
       <label class="carousel__control carousel__control--forward" for="J"></label>
     </div>
-    <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="I"></label>
-      <label class="carousel__control carousel__control--forward" for="F"></label>
-    </div>
     <div class="carousel__track">
       <li class="carousel__slide">
-        <h3>Greening as a Service</h3>
-        <p>
-          (Supported by: NSF CSR , NSF CAREER)
-        </p>
-        <p>
-          <heading>Research Challenge:</heading>
-          <p>
-            Internet services that provide search, e-commerce, and social networking have changed the world, but their growing carbon footprint is a concern.  By 2020, the annual carbon footprint of hosting centers worldwide is expected to exceed the footprint of the Netherlands.  Massive carbon footprints contribute to climate change and could lead to costly, punitive regulations.  Our research attempts to slow the growth of carbon footprints by moving Internet services to clean energy.  The challenge is that, as of today, most sources of clean energy are more expensive per joule than dirty sources.
-
-          </p>
-          <p>
-            We propose greening services, a new type of service that aligns clean energy goals with profit incentives.  Greening services use clean energy to power requests routed through their servers, even if those requests access servers run by other services.   In other words, a greening service is a service that makes other services green.  In our vision, greening services will use renewable energy credits or carbon offsets.  These transferable certificates undo greenhouse-gas emissions transparently, even when emissions occur in carbon-heavy areas, making them attractive to large-scale, geographically distributed services.
-          </p>
-          <p>
-            Greening services work because some users will prefer to route their requests through environmentally sustainable services.  Greening services can profit from those users without incurring the full costs of running large scale services.  However, greening services must manage their costs.  Our systems research studies the potential for caching on greening services.  We also study the challenge of accurately accounting the carbon footprint of remote servers.
-          </p>
-        </p>
-      </li>
-
-      <li class="carousel__slide">
-        <h1>H</h1>
+        <h2>PHD Students</h2>
+        <% phdStudent.each do |student| %>
+        <p><span><%= student[:name] %></span>,<a href='<%= student[:page]  %>'>webpage</a></p>
+          <p><%= student[:intro] %></p>
+        <% end %>
       </li>
       <li class="carousel__slide">
-        <div class="">
-          <h3>Quality Aware Management</h3>
-          <p>(Supported by: NSF CSR SMALL )
-(Collaborators: Microsoft Research, Oak Ridge National Labs, Morehouse College, NCWIT, OSU Office of Diversity and Inclusion ) </p>
-
-<p>Research Challenge:
-For many next generation services, data will grow much faster than processing capacity.  These services will access only a portion of the data relevant to a user's query.  Our research helps services automatically 1) identify the most valuable data for each user request and 2) ensure it can be accessed readily and cost effectively.  Thus far, we have focused on natural language processing services, e.g., search engines and question-answering systems.  For a specific user request, NL data often contains redundancies, e.g., multiple web pages with the same information or multiple word phrases with same meaning.  These redundancies can crowd out useful data causing to NLP services to produce poor quality results.  Our contribution is systems support to measure quality for distributed services and, subsequently, manage resources cost effectively within quality constraints.
-</p>
-<p>
-Recommended Reading:
-Cache Provisioning for Interactive NLP Services, LADiS 2013
-Balanced and Predictable Networked Storage, DCPerf 2013
-</p>
-        </div>
+        <h2>Master Students</h2>
+          <% masterStudent.each do |student| %>
+          <p><span><%= student[:name] %></span>, <span><%= student[:intro] %></span></p>
+          <% end %>
       </li>
       <li class="carousel__slide">
-        <h1>I</h1>
+        <h2>Undergraduate Students</h2>
+        <% undergdStudent.each do |student| %>
+        <p><span><%= student[:name] %></span>, <span><%= student[:intro] %></span></p>
+        <% end %>
       </li>
       <li class="carousel__slide">
-        <h1>J</h1>
+        <h2>Summer Intern</h2>
+        <% intermStudent.each do |student| %>
+        <p><span><%= student[:name] %></span>, <span><%= student[:intro] %></span></p>
+        <% end %>
       </li>
     </div>
     <div class="carousel__indicators">
@@ -133,7 +105,7 @@ Balanced and Predictable Networked Storage, DCPerf 2013
     </div>
   </div>
 </div>
-</div> -->
+</div>
 
 
 <div class="tabPanel-widget">
