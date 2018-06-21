@@ -8,6 +8,8 @@
         -->
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "No Frontmatter" %></title>
+    <link href="stylesheets/site.css" rel="stylesheet" />
+    <base target="_blank">
     <%= stylesheet_link_tag "site" %>
   </head>
   <body>
