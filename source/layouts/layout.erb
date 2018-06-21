@@ -10,13 +10,15 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "No Frontmatter" %></title>
     <link href="stylesheets/site.css" rel="stylesheet" />
-    <base target="_blank">
+    <base target="_top">
     <%= stylesheet_link_tag "site" %>
     <%= stylesheet_link_tag 'lab' %>
   </head>
   <body>
     <%= partial "navigation" %>
+    <div class="content-container">
     <%= yield %>
+    </div>
     <%= partial "footer" %>
   </body>
 </html>
