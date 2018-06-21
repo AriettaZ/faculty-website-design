@@ -49,7 +49,7 @@
   </ul>
   </div>
 
-  <div class="carousel-container">
+  <!-- <div class="carousel-container">
   <h2>Projects</h2>
   <div class="carousel my-carousel carousel--translate">
     <input class="carousel__activator" type="radio" name="carousel" id="F" checked="checked"/>
@@ -79,8 +79,31 @@
     </div>
     <div class="carousel__track">
       <li class="carousel__slide">
-        <!-- <h1>Quality Aware Management</h1> -->
+        <h3>Greening as a Service</h3>
+        <p>
+          (Supported by: NSF CSR , NSF CAREER)
+        </p>
+        <p>
+          <heading>Research Challenge:</heading>
+          <p>
+            Internet services that provide search, e-commerce, and social networking have changed the world, but their growing carbon footprint is a concern.  By 2020, the annual carbon footprint of hosting centers worldwide is expected to exceed the footprint of the Netherlands.  Massive carbon footprints contribute to climate change and could lead to costly, punitive regulations.  Our research attempts to slow the growth of carbon footprints by moving Internet services to clean energy.  The challenge is that, as of today, most sources of clean energy are more expensive per joule than dirty sources.
+
+          </p>
+          <p>
+            We propose greening services, a new type of service that aligns clean energy goals with profit incentives.  Greening services use clean energy to power requests routed through their servers, even if those requests access servers run by other services.   In other words, a greening service is a service that makes other services green.  In our vision, greening services will use renewable energy credits or carbon offsets.  These transferable certificates undo greenhouse-gas emissions transparently, even when emissions occur in carbon-heavy areas, making them attractive to large-scale, geographically distributed services.
+          </p>
+          <p>
+            Greening services work because some users will prefer to route their requests through environmentally sustainable services.  Greening services can profit from those users without incurring the full costs of running large scale services.  However, greening services must manage their costs.  Our systems research studies the potential for caching on greening services.  We also study the challenge of accurately accounting the carbon footprint of remote servers.
+          </p>
+        </p>
+      </li>
+
+      <li class="carousel__slide">
+        <h1>H</h1>
+      </li>
+      <li class="carousel__slide">
         <div class="">
+          <h3>Quality Aware Management</h3>
           <p>(Supported by: NSF CSR SMALL )
 (Collaborators: Microsoft Research, Oak Ridge National Labs, Morehouse College, NCWIT, OSU Office of Diversity and Inclusion ) </p>
 
@@ -93,12 +116,6 @@ Cache Provisioning for Interactive NLP Services, LADiS 2013
 Balanced and Predictable Networked Storage, DCPerf 2013
 </p>
         </div>
-      </li>
-      <li class="carousel__slide">
-        <h1>G</h1>
-      </li>
-      <li class="carousel__slide">
-        <h1>H</h1>
       </li>
       <li class="carousel__slide">
         <h1>I</h1>
@@ -116,60 +133,81 @@ Balanced and Predictable Networked Storage, DCPerf 2013
     </div>
   </div>
 </div>
+</div> -->
+
+
+<div class="tabPanel-widget">
+  <label for="tab-1" tabindex="0"></label>
+    <input id="tab-1" type="radio" name="tabs" checked="true" aria-hidden="true">
+  <p>Greening as a Service</p>
+  <div>
+    <h2>Greening as a Service</h2>
+    <p>(Supported by: NSF CSR SMALL )
+(Collaborators: Microsoft Research, Oak Ridge National Labs, Morehouse College, NCWIT, OSU Office of Diversity and Inclusion ) </p>
+
+<h2>Research Challenge:</h2>
+<p>
+  Internet services that provide search, e-commerce, and social networking have changed the world, but their growing carbon footprint is a concern.  By 2020, the annual carbon footprint of hosting centers worldwide is expected to exceed the footprint of the Netherlands.  Massive carbon footprints contribute to climate change and could lead to costly, punitive regulations.  Our research attempts to slow the growth of carbon footprints by moving Internet services to clean energy.  The challenge is that, as of today, most sources of clean energy are more expensive per joule than dirty sources.
+
+</p>
+<p>
+  We propose greening services, a new type of service that aligns clean energy goals with profit incentives.  Greening services use clean energy to power requests routed through their servers, even if those requests access servers run by other services.   In other words, a greening service is a service that makes other services green.  In our vision, greening services will use renewable energy credits or carbon offsets.  These transferable certificates undo greenhouse-gas emissions transparently, even when emissions occur in carbon-heavy areas, making them attractive to large-scale, geographically distributed services.
+</p>
+<p>
+  Greening services work because some users will prefer to route their requests through environmentally sustainable services.  Greening services can profit from those users without incurring the full costs of running large scale services.  However, greening services must manage their costs.  Our systems research studies the potential for caching on greening services.  We also study the challenge of accurately accounting the carbon footprint of remote servers.
+</p>
+<h3>Recommended Reading: </h3>
+<a href="http://web.cse.ohio-state.edu/~stewart.962/Papers/dengicac12.pdf">Adaptive Green Hosting, ICAC 2012</a>
+<a href="http://web.cse.ohio-state.edu/~stewart.962/Papers/dengissst11.pdf">ISSST 2010 (Third Best Paper)</a>
+<h3>Impact: </h3>
+<p>
+  <a href="https://www.datagreening.com/">Datagreening.com</a>is prototype greening service.  It moves email (specifically, IMAP) to clean energy.  The site is publically accessible in the Beta version.  Our goal is to offset 2 Tonnes of CO2E in 2014.  We support any type of email that can be accessed through IMAP, in particular we often host GMail, Yahoo, Hotmail users.
+</p>
+<h3>Media and Press Release:</h3>
+<p>
+  Visit <a href="https://www.datagreening.com">https://www.datagreening.com</a>
+
+</p>
+  </div>
+  <label for="tab-2" tabi ndex="0"></label>
+  <input id="tab-2" type="radio" name="tabs" aria-h idden="true">
+  <h3>High Performance Cloud Infrastructure</h3>
+  <div>
+    <h2>High Performance Cloud Infrastructure</h2>
+    <p>(Supported by: NSF CSR SMALL , Amazon Equipment Grant, Nationwide Children's Hostpital ) </p>
+    <p>(Collaborators: Nationwide Children's Hostpital, VMWare ) </p>
+    <h3>Research Challenge:</h3>
+    <p>
+      Over 90% of the world's digital data was produced in the last 2 years. The next generation of Internet services will access a lot of data for each user request, but neither processor speeds nor expectations for fast response times change.  We are building cloud infrastructure, e.g., key-value stores and data-parallel platforms, that can efficiently and scalably access large ammounts of data in seconds.  The increasing density of main memory serves as a building block for such services.  However, main memory systems are sensitive to performance anomalies at scale, i.e., 100 to 1000 threads per user request.  In such systems, response times can depend on the slowest main memory acceess times---not the average access times.  Unfortunately, access times in practice are not normally distributed.  The slowest accesses can 100X larger than the average, causing large delays.  It is also challenging to keep main memory systems fully utilized.  Small slowdowns caused by background jobs, compliance software, or garbage collection can ripple throughout the processing pipeline, leading to inefficient execution and slow response times.
+    </p>
+
+    <h3>Recommended Reading: </h3>
+    <a href="http://web.cse.ohio-state.edu/~stewart.962/Papers/kelleyladis13.pdf">Cache Provisioning for Interactive NLP Services, LADiS 2013 </a>
+    <a href=""></a>
+  </div>
+  <label for="tab-3" tabindex="0"></label>
+  <input id="tab-3" type="radio" name="tabs" aria-hidden="true">
+  <h2>Source</h2>
+  <div>
+    <p>The source element allows authors to specify multiple alternative media resources for media elements. It does not represent anything on its own. The src attribute gives the address of the media resource. The value must be a valid non-empty URL potentially surrounded by spaces. This attribute must be present.</p>
+    <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Source</p>
+  </div>
 </div>
 
-
-<div class="carousel-container">
-  <h2>slider</h2>
-  <div class="carousel my-carousel carousel--translate">
-    <input class="carousel__activator" type="radio" name="carousel" id="F" checked="checked"/>
-    <input class="carousel__activator" type="radio" name="carousel" id="G"/>
-    <input class="carousel__activator" type="radio" name="carousel" id="H"/>
-    <input class="carousel__activator" type="radio" name="carousel" id="I"/>
-    <input class="carousel__activator" type="radio" name="carousel" id="J"/>
-    <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="J"></label>
-      <label class="carousel__control carousel__control--forward" for="G"></label>
-    </div>
-    <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="F"></label>
-      <label class="carousel__control carousel__control--forward" for="H"></label>
-    </div>
-    <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="G"></label>
-      <label class="carousel__control carousel__control--forward" for="I"></label>
-    </div>
-    <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="H"></label>
-      <label class="carousel__control carousel__control--forward" for="J"></label>
-    </div>
-    <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="I"></label>
-      <label class="carousel__control carousel__control--forward" for="F"></label>
-    </div>
-    <div class="carousel__track">
-      <li class="carousel__slide">
-        <h1>F</h1>
-      </li>
-      <li class="carousel__slide">
-        <h1>G</h1>
-      </li>
-      <li class="carousel__slide">
-        <h1>H</h1>
-      </li>
-      <li class="carousel__slide">
-        <h1>I</h1>
-      </li>
-      <li class="carousel__slide">
-        <h1>J</h1>
-      </li>
-    </div>
-    <div class="carousel__indicators">
-      <label class="carousel__indicator" for="F"></label>
-      <label class="carousel__indicator" for="G"></label>
-      <label class="carousel__indicator" for="H"></label>
-      <label class="carousel__indicator" for="I"></label>
-      <label class="carousel__indicator" for="J"></label>
-    </div>
+<div class="tabPanel-widget">
+  <label for="tab-1" tabindex="0"></label>
+    <input id="tab-1" type="radio" name="tabs" checked="true" aria-hidden="true">
+  <h2>Strong</h2>
+  <div>
+  </div>
+  <label for="tab-2" tabi ndex="0"></label>
+  <input id="tab-2" type="radio" name="tabs" aria-h idden="true">
+  <h2>Section</h2>
+  <div>
+  </div>
+  <label for="tab-3" tabindex="0"></label>
+  <input id="tab-3" type="radio" name="tabs" aria-hidden="true">
+  <h2>Source</h2>
+  <div>
   </div>
 </div>
