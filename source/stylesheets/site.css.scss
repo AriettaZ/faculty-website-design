@@ -1,14 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed|Roboto");
-body{
-    margin: 0;
-    padding: 0;
-    // background-color: #dcdbda;
-    line-height: 1.4em;
+// body{
+//     margin: 0;
+//     padding: 0;
+//     // background-color: #dcdbda;
+//     line-height: 1.4em;
+// }
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  // background-color: #dcdbda;
+  line-height: 1.4em;
 }
-
 .content-container {
     margin: 40px auto 0px auto;
-    width: 80%;
+    width: 70%;
     z-index: 5;
     position:relative;
     top:3em;
@@ -29,10 +36,7 @@ a:visited{
 h1,h2,h3,h4{
   color: #ae190e;
 }
-html,
-body {
-  font-family: 'Lato', sans-serif;
-}
+
 
 table{
   font-family: 'Roboto Condensed', sans-serif;
