@@ -1,44 +1,95 @@
 #publication h1 {
-  margin: 0 0 30px 0;
-  display: inline-block; }
+    margin: 0 0 30px 0;
+    display: inline-block;
+}
 
 .publication-standard {
-  font-size: 9px; }
+    font-size: 9px;
+}
 
 .year {
-  text-align: center;
-  height: 60px;
-  line-height: 60px;
-  background: #ae190e;
-  color: white;
-  font-size: 26px;
-  font-weight: bolder; }
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    background: #ae190e;
+    color: white;
+    font-size: 26px;
+    font-weight: bolder;
+}
 
 table {
-  border-collapse: collapse; }
+    border-collapse: collapse;
+}
 
 th,
 td {
-  padding: 10px 15px;
-  text-align: center; }
+    padding: 10px 15px;
+    text-align: center;
+}
 
 td {
-  border-bottom: black 1px solid; }
+    border-bottom: black 1px solid;
+}
 
 tr:last-child td {
-  border-bottom: 0; }
+    border-bottom: 0;
+}
 
 .title {
-  width: 40%; }
+    width: 40%;
+}
 
 .author {
-  width: 25%; }
+    width: 25%;
+}
 
 .event {
-  width: 25%; }
+    width: 25%;
+}
 
 .location {
-  width: 5%; }
+    width: 5%;
+}
 
 .link {
-  width: 5%; }
+    width: 5%;
+}
+
+#publication-sidebar {
+    position: fixed;
+    height: 375px;
+    right: 20px;
+    top: 50%;
+    margin-top: -170px;
+    list-style-type: none;
+}
+
+#publication-sidebar li {
+    height: 25px;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#publication-sidebar li:hover {
+    background-color: blue;
+    -webkit-box-shadow: 0px 1px 1px #84110a;
+    box-shadow: 0px 1px 1px #84110a;
+    background-color: #ae190e;
+    font-weight: bold;
+}
+
+#publication-sidebar li a {
+    text-decoration: none;
+}
+
+#publication-sidebar li:hover a {
+    color: white;
+}
+
+.anchor {
+    display: block;
+    height: 60px;
+    visibility: none;
+    margin-top: -60px;
+}

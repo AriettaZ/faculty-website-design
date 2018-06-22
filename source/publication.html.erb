@@ -7,7 +7,14 @@ title: Publication
 	<h1>Publications</h1>
 	<a href="https://www.cs.rutgers.edu/~ricardob/note.html" class="publication-standard">CS publishing standards</a>
 	<% data = Marshal.load File.read("data/publication_data") %>
+	<ul id="publication-sidebar">
+		<% data.keys.each do |year| %>
+		<li><a href="#year-<%= year.to_s%>"><%= year.to_s%></a></li>
+		<% end %>
+	</ul>
+	
 	<% data.keys.each do |year| %>
+	<span id="year-<%= year.to_s %>" class="anchor"></span>
 	<div class="year">
 		<%= year.to_s %>
 	</div>
