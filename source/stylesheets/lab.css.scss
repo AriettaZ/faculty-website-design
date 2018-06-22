@@ -1,10 +1,4 @@
-// @import url("https://fonts.googleapis.com/css?family=Roboto:900");
-/**
-  * style variables
-*/
-/**
-  * Control & indicator mixin
-*/
+
 .carousel {
   height: 600px;
   width: 600px;
@@ -228,16 +222,6 @@
 /**
   * Theming
 */
-* {
-  box-sizing: border-box;
-}
-html,
-body {
-  // background-color: #111;
-  // font-family: 'Roboto', sans-serif;
-  // text-align: center;
-  // color: #fff;
-}
 .carousel-container {
   display: inline-block;
 }
@@ -326,7 +310,7 @@ dl {
 .tabPanel-widget > label,
 .tabPanel-widget > h2 {
   font-size: 1.1em;
-  width: 15em;
+  width: 33.33%;
   height: 2em;
   line-height: 2em;
 }
@@ -369,12 +353,12 @@ dl {
 
 .tabPanel-widget label:nth-child(5),
 .tabPanel-widget h2:nth-child(7) {
-  left: 15em;
+  left: 33.3%;
 }
 
 .tabPanel-widget label:nth-child(9),
 .tabPanel-widget h2:nth-child(11) {
-  left: 30em;
+  left: 66.6%;
 }
 
 /**
