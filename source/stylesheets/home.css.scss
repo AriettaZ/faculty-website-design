@@ -1,0 +1,28 @@
+
+#bio-pic div {
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 3;
+  height: auto;
+  margin: auto;
+  text-align: center; }
+
+.content p {
+  text-align: left; }
+
+.outer {
+  height: 100%;
+  width: 100%;
+  display: table;
+  vertical-align: middle; }
+
+.container {
+  position: relative;
+  vertical-align: middle;
+  display: table-cell; }
+
+.inner {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative; }

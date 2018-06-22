@@ -9,10 +9,20 @@
     -->
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "No Frontmatter" %></title>
-    <link href="stylesheets/site.css" rel="stylesheet" />
     <base target="_top">
-    <%= stylesheet_link_tag "site" %>
+    	<link rel="stylesheet" href="stylesheets/site.css" />
+    	<link rel="stylesheet" href="stylesheets/navigation.css" />
+    	<link rel="stylesheet" href="stylesheets/footer.css" />
+    	
+    	<link rel="stylesheet" href="stylesheets/home.css" />
+    <link rel="stylesheet" href="stylesheets/lab.css" />
+    <link rel="stylesheet" href="stylesheets/contact.css" />
+    <link rel="stylesheet" href="stylesheets/publication.css" />
+    <link rel="stylesheet" href="stylesheets/reward.css" />
+    
+    <!--<%= stylesheet_link_tag "site" %>
     <%= stylesheet_link_tag 'lab' %>
+    <%= stylesheet_link_tag 'navigation' %>-->
   </head>
   <body>
     <%= partial "navigation" %>
