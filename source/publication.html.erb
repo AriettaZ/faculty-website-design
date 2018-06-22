@@ -1,5 +1,5 @@
----
-title: Publication
+--- 
+title: Publication 
 ---
 
 <% require_relative "../lib/publication.rb" %>
@@ -7,12 +7,16 @@ title: Publication
 	<h1>Publications</h1>
 	<a href="https://www.cs.rutgers.edu/~ricardob/note.html" class="publication-standard">CS publishing standards</a>
 	<% data = Marshal.load File.read("data/publication_data") %>
-	<ul id="publication-sidebar">
+	<ul id="publication-year-sidebar">
 		<% data.keys.each do |year| %>
-		<li><a href="#year-<%= year.to_s%>"><%= year.to_s%></a></li>
+		<li>
+			<a href="#year-<%= year.to_s%>">
+				<%= year.to_s%>
+			</a>
+		</li>
 		<% end %>
 	</ul>
-	
+
 	<% data.keys.each do |year| %>
 	<span id="year-<%= year.to_s %>" class="anchor"></span>
 	<div class="year">
@@ -44,16 +48,16 @@ title: Publication
 			</td>
 			<td class="link">
 				<% if publication.pdf_link.strip.length!=0 %>
-				<a class="pdf" <%= 'href=\"'+publication.pdf_link+'\"'%>>pdf</a><br />
+				<a class="pdf" <%= 'href=\"' +publication.pdf_link+ '\"'%>>pdf</a><br />
 				<% end %>
 				<% if publication.ppt_link.strip.length!=0 %>
-				<a class="ppt" <%= 'href=\"'+publication.ppt_link+'\"'%>>ppt</a><br />
+				<a class="ppt" <%= 'href=\"' +publication.ppt_link+ '\"'%>>ppt</a><br />
 				<% end %>
 				<% if publication.bibtex_link.strip.length!=0 %>
-				<a class="bib" <%= 'href=\"'+publication.bibtex_link+'\"'%>>bibtex</a><br />
+				<a class="bib" <%= 'href=\"' +publication.bibtex_link+ '\"'%>>bibtex</a><br />
 				<% end %>
 				<% if publication.event_link.strip.length!=0 %>
-				<a class="event" <%= 'href=\"'+publication.event_link+'\"'%>>event</a>
+				<a class="event" <%= 'href=\"' +publication.event_link+ '\"'%>>event</a>
 				<% end %>
 			</td>
 		</tr>
