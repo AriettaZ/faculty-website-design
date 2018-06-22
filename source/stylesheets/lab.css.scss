@@ -13,21 +13,6 @@
   position: relative;
   padding: 0;
   list-style: none;
-/**
-  * Where the magic happens
-  */
-/**
-    * Control element - right/left arrows
-  */
-/**
-    * Element for holding slide indicators
-  */
-/**
-    * Indicator for indicating active slide
-  */
-/**
-    * Create rules for when slides are contained within a track
-  */
 }
 .carousel__controls,
 .carousel__activator {
@@ -267,23 +252,7 @@ body {
   height: 30px;
   width: 30px;
 }
-// h1 {
-//   font-size: 50px;
-//   line-height: 50px;
-//   color: #fafafa;
-//   position: absolute;
-//   top: 50%;
-//   width: 100%;
-//   text-align: center;
-//   margin-top: -25px;
-// }
-// h2,
-// h3 {
-//   color: #fafafa;
-// }
-// h3 {
-//   font-size: 50px;
-// }
+
 .carousel__indicator {
   background-color: #fafafa;
 }
@@ -357,7 +326,7 @@ dl {
 .tabPanel-widget > label,
 .tabPanel-widget > h2 {
   font-size: 1.1em;
-  width: 9em;
+  width: 15em;
   height: 2em;
   line-height: 2em;
 }
@@ -400,12 +369,12 @@ dl {
 
 .tabPanel-widget label:nth-child(5),
 .tabPanel-widget h2:nth-child(7) {
-  left: 9em;
+  left: 15em;
 }
 
 .tabPanel-widget label:nth-child(9),
 .tabPanel-widget h2:nth-child(11) {
-  left: 18em;
+  left: 30em;
 }
 
 /**

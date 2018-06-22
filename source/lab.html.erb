@@ -26,7 +26,7 @@
       {name:"Brian Carr",intro:"2015, Microsoft "},{name:"Xiaoran Hu",intro:"2014, went to USC, Research highlight: Undergraduate thesis"},
       {name:"Ashley Biales-Wise",intro:"2014, first employment GM"},{name:"Alex Bunch",intro:"2012, went to Carnegie Mellon University
 Research highlight: Alex's undergraduate thesis laid the framework for https://www.datagreening.com"}]%>
-    <% intermStudent =[{name:"Onix Tarrat",intro:"SROP, 2017"},{name:"CeDale Smith",intro:"SROP, 2014"},
+    <% internStudent =[{name:"Onix Tarrat",intro:"SROP, 2017"},{name:"CeDale Smith",intro:"SROP, 2014"},
       {name:"Joel Poualeu",intro:"DREU, 2010"},{name:"Nelson Burgos",intro:"DREU, 2010"}]%>
     <!-- <h2>PHD Students</h2>
   <ul>
@@ -51,7 +51,7 @@ Research highlight: Alex's undergraduate thesis laid the framework for https://w
   </ul>
   <h2>Summer Intern</h2>
   <ul>
-    <% intermStudent.each do |student| %>
+    <% internStudent.each do |student| %>
     <p><span><%= student[:name] %></span>, <span><%= student[:intro] %></span></p>
     <% end %>
   </ul> -->
@@ -60,25 +60,25 @@ Research highlight: Alex's undergraduate thesis laid the framework for https://w
   <div class="carousel-container">
   <h2>People</h2>
   <div class="carousel my-carousel carousel--translate">
-    <input class="carousel__activator" type="radio" name="carousel" id="F" checked="checked"/>
-    <input class="carousel__activator" type="radio" name="carousel" id="G"/>
-    <input class="carousel__activator" type="radio" name="carousel" id="H"/>
-    <input class="carousel__activator" type="radio" name="carousel" id="I"/>
+    <input class="carousel__activator" type="radio" name="carousel" id="phdStudent" checked="checked"/>
+    <input class="carousel__activator" type="radio" name="carousel" id="masterStudent"/>
+    <input class="carousel__activator" type="radio" name="carousel" id="undergdStudent"/>
+    <input class="carousel__activator" type="radio" name="carousel" id="internStudent"/>
     <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="J"></label>
-      <label class="carousel__control carousel__control--forward" for="G"></label>
+      <label class="carousel__control carousel__control--backward" for="phdStudent"></label>
+      <label class="carousel__control carousel__control--forward" for="masterStudent"></label>
     </div>
     <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="F"></label>
-      <label class="carousel__control carousel__control--forward" for="H"></label>
+      <label class="carousel__control carousel__control--backward" for="masterStudent"></label>
+      <label class="carousel__control carousel__control--forward" for="undergdStudent"></label>
     </div>
     <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="G"></label>
-      <label class="carousel__control carousel__control--forward" for="I"></label>
+      <label class="carousel__control carousel__control--backward" for="undergdStudent"></label>
+      <label class="carousel__control carousel__control--forward" for="internStudent"></label>
     </div>
     <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="H"></label>
-      <label class="carousel__control carousel__control--forward" for="J"></label>
+      <label class="carousel__control carousel__control--backward" for="internStudent"></label>
+      <label class="carousel__control carousel__control--forward" for="phdStudent"></label>
     </div>
     <div class="carousel__track">
       <li class="carousel__slide">
@@ -102,17 +102,16 @@ Research highlight: Alex's undergraduate thesis laid the framework for https://w
       </li>
       <li class="carousel__slide">
         <h2>Summer Intern</h2>
-        <% intermStudent.each do |student| %>
+        <% internStudent.each do |student| %>
         <p><strong><%= student[:name] %></strong>, <span><%= student[:intro] %></span></p>
         <% end %>
       </li>
     </div>
     <div class="carousel__indicators">
-      <label class="carousel__indicator" for="F"></label>
-      <label class="carousel__indicator" for="G"></label>
-      <label class="carousel__indicator" for="H"></label>
-      <label class="carousel__indicator" for="I"></label>
-      <label class="carousel__indicator" for="J"></label>
+      <label class="carousel__indicator" for="phdStudent"></label>
+      <label class="carousel__indicator" for="masterStudent"></label>
+      <label class="carousel__indicator" for="undergdStudent"></label>
+      <label class="carousel__indicator" for="internStudent"></label>
     </div>
   </div>
 </div>
@@ -120,10 +119,11 @@ Research highlight: Alex's undergraduate thesis laid the framework for https://w
 
 
 <div class="tabPanel-widget" id="projects">
-  <label for="tab-1" tabindex="0"></label>
-    <input id="tab-1" type="radio" name="tabs" checked="true" aria-hidden="true">
+  <label for="project1" tabindex="0"></label>
+    <input id="project1" type="radio" name="tabs" checked="true" aria-hidden="true">
   <h2>project1</h2>
   <div>
+    <%= image_tag 'mantismail.png' %>
     <h2>Greening as a Service</h2>
     <p>(Supported by: NSF CSR SMALL )
 (Collaborators: Microsoft Research, Oak Ridge National Labs, Morehouse College, NCWIT, OSU Office of Diversity and Inclusion ) </p>
@@ -152,8 +152,8 @@ Research highlight: Alex's undergraduate thesis laid the framework for https://w
 
 </p>
   </div>
-  <label for="tab-2" tabi ndex="0"></label>
-  <input id="tab-2" type="radio" name="tabs" aria-h idden="true">
+  <label for="project2" tabindex="0"></label>
+  <input id="project2" type="radio" name="tabs" aria-hidden="true">
   <h2>project2</h2>
   <div>
     <h2>High Performance Cloud Infrastructure</h2>
