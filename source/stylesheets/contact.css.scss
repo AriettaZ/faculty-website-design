@@ -1,11 +1,12 @@
 // Contact page style sheet
-.content p {
+.center {
+  margin: 0px auto;
+  display: table;
   text-align: left;
 }
 
-.content-container{
-  margin: 0px auto;
-  width: 80%;
+.content p {
+  text-align: left;
 }
 
 .outer {
@@ -20,7 +21,6 @@
   vertical-align: middle;
   display: table-cell;
 }
-
 
 #info-links img {
   height: 1em;
