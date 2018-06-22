@@ -3,33 +3,55 @@ title: Publication
 ---
 
 <% require_relative "../lib/publication.rb" %>
-<h1>Publications</h1>
-<a href="https://www.cs.rutgers.edu/~ricardob/note.html">CS publishing standards</a>
-<% data = Marshal.load File.read("data/publication_data") %>
-<% data.keys.each do |year| %>
-	<div class="publication-year"><%= year.to_s %></div>
-	<table>
-	
-	<tr>
-		<th>title</th>
-		<th>authors</th>
-		<th>Event</th>
-		<th>Location</th>
-		<th colspan=\"4\">Link</th>
-	</tr>
-	
-	<% data[year].each do |publication| %>
+<div id="publication">
+	<h1>Publications</h1>
+	<a href="https://www.cs.rutgers.edu/~ricardob/note.html" class="publication-standard">CS publishing standards</a>
+	<% data = Marshal.load File.read("data/publication_data") %>
+	<% data.keys.each do |year| %>
+	<div class="year">
+		<%= year.to_s %>
+	</div>
+	<table class="table">
+
 		<tr>
-			<td><%= publication.title %></td>
-			<td><%= publication.author_str %></td>
-			<td><%= publication.event_name %></td>
-			<td><%= publication.location %></td>
-			<td><a href="<%= publication.pdf_link %>">pdf</a></td>
-			<td><a href="<%= publication.ppt_link %>">ppt</a></td>
-			<td><a href="<%= publication.bibtex_link %>">bibtex</a></td>
-			<td><a href="<%= publication.event_link %>">event</a></td>
-			</tr>
-	<% end %>
-	
+			<th class="title">Title</th>
+			<th class="author">Author</th>
+			<th class="event">Event</th>
+			<th class="location">Location</th>
+			<th colspan="4" class="link">Link</th>
+		</tr>
+
+		<% data[year].each do |publication| %>
+		<tr>
+			<td class="title">
+				<%= publication.title %>
+			</td>
+			<td class="author">
+				<%= publication.author_list.join(", ") %>
+			</td>
+			<td class="event">
+				<%= publication.event_name %>
+			</td>
+			<td class="location">
+				<%= publication.location %>
+			</td>
+			<td class="link">
+				<% if publication.pdf_link.strip.length!=0 %>
+				<a class="pdf" <%= 'href=\"'+publication.pdf_link+'\"'%>>pdf</a><br />
+				<% end %>
+				<% if publication.ppt_link.strip.length!=0 %>
+				<a class="ppt" <%= 'href=\"'+publication.ppt_link+'\"'%>>ppt</a><br />
+				<% end %>
+				<% if publication.bibtex_link.strip.length!=0 %>
+				<a class="bib" <%= 'href=\"'+publication.bibtex_link+'\"'%>>bibtex</a><br />
+				<% end %>
+				<% if publication.event_link.strip.length!=0 %>
+				<a class="event" <%= 'href=\"'+publication.event_link+'\"'%>>event</a>
+				<% end %>
+			</td>
+		</tr>
+		<% end %>
+
 	</table>
-<% end %>
+	<% end %>
+</div>
