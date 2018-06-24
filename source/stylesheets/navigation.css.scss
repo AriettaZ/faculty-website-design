@@ -23,12 +23,13 @@
     width: 20%;
     line-height: 45px;
     text-align: center;
+    color: white;
 }
 
-#sitenav li:hover{
+#sitenav li:hover,.active{
     cursor: pointer;
     background-color: #6d0f09;
-    font-weight: 900;
+    font-weight: 1100;
 }
 
 #sitenav li a {
@@ -40,6 +41,8 @@
 .dropdown-content{
     display: none;
     background-color: #ae190e;
+    position: relative;
+    bottom: 45px
 }
 
 #sitenav .dropdown:hover .dropdown-content{
@@ -51,7 +54,7 @@
     font-weight: normal;
 }
 
-#sitenav .dropdown-content a:hover{
+#sitenav .dropdown-content a:hover,#sitenav .dropdown-content a:active{
     background-color: #6d0f09;
-    font-weight: 900;
+    font-weight: 1100;
 }
