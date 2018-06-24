@@ -1,3 +1,8 @@
+/* Author: Ariel
+Created: 6/20
+Edit: 6/20 Ariel
+Description:.ReRout overview, people list and project introduction */
+
 {"phdStudent":[
   {"name":"Jayson Boubin","page":"https://www.linkedin.com/in/jayson-boubin-94a51a89/","intro":"Research Highlights: Winner CSE Departmental Fellowship"},
   {"name":"Nathaniel Morris","page":"http://web.cse.ohio-state.edu/~morris.743/pages/about.html","intro":"Research Highlights: Ford Fellowship Honorable Mention, ICAC 2017 and SOSP 2017 Travel Grant; Developing novel models to predict response time under computational sprinting "},
