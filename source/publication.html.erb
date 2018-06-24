@@ -2,12 +2,18 @@
 title: Publication 
 ---
 
+<!--Author: Mike
+	Created: 6/20
+	Edit: Mike 6/21 Add sidebar
+	-->
+
+
 <% require_relative "../lib/publication.rb" %>
 <div id="publication">
 	<h1>Publications</h1>
 	<a href="https://www.cs.rutgers.edu/~ricardob/note.html" class="publication-standard">CS publishing standards</a>
 	<% data = Marshal.load File.read("data/publication_data") %>
-	<ul id="publication-year-sidebar">
+	<aside id="publication-year-sidebar">
 		<% data.keys.each do |year| %>
 		<li>
 			<a href="#year-<%= year.to_s%>">
@@ -15,7 +21,7 @@ title: Publication
 			</a>
 		</li>
 		<% end %>
-	</ul>
+	</aside>
 
 	<% data.keys.each do |year| %>
 	<span id="year-<%= year.to_s %>" class="anchor"></span>
