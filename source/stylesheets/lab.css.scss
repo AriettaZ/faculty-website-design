@@ -26,16 +26,13 @@
   width: 88%;
   display: block;
 }
-.people{
-  height: 40em;
-  display: block;
-}
+
 .people h1{
   margin-bottom: 1em;
 }
 .select_list {
   list-style-type: none;
-  height: 36em;
+  height: 35em;
   width: 90%;
   position: relative;
   text-align: center;
@@ -52,7 +49,14 @@
   line-height: 7em;
 }
 
-.select_list  h2 {
+.navtab > label,
+.navtab > h2 {
+  font-size: 1.1em;
+  height: 3em;
+  line-height: 3em;
+}
+
+.select_list  h2, .navtab > h2 {
   position: relative;
   margin: 0;
   text-align: center;
@@ -60,13 +64,20 @@
   color: white;
 }
 
-.select_list label {
+.select_list > label, .navtab > label {
   position: absolute;
   z-index: 1;
+}
+
+.select_list > label {
   border-bottom: 1px solid #fff;
 }
 
-.select_list input{
+.navtab > label {
+  border-right: 1px solid #fff;
+}
+
+.select_list input, .navtab input {
   position: absolute;
   top: 0;
   opacity: 0;
@@ -87,40 +98,46 @@
   transition: 0.5s;
 }
 
-.select_list .button:hover span{
+.select_list input:hover + h2 span{
   padding-right: 25px;
 }
 
-.select_list .button:hover span:after {
+.select_list input:hover + h2 span:after {
   opacity: 1;
   right: 0;
+  z-index: 10;
 }
 
-.select_list input:checked + h2 {
+.select_list input:checked + h2,.navtab input:checked + h2  {
   background: #6d0f09;
 }
 
-.select_list  input + h2 + div.student_info {
+.select_list input:checked + h2 + div.student_info , .navtab input:checked + h2 + div{
+    position: static;
+    padding: 1em;
+    height: auto;
+    width: auto;
+}
+.navtab input + h2 + div, .select_list  input + h2 + div.student_info  {
   position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 ;
+  border:0;
   height: 1px;
   width: 1px;
   overflow: hidden;
 }
-/**
- * we reveal a panel depending on which control is selected
- */
-.select_list input:checked + h2 + div.student_info {
-    width: 60% ;
-    position: static;
-    padding: 1em;
-    height: auto;
+
+.select_list input:checked + h2 + div.student_info  {
+    width: 60%;
     float: right;
 }
-
-
-.select_list input,
-.select_list label,
-.select_list  h2{
+.select_list >input,
+.select_list >label,
+.select_list > h2,
+.navtab > input,
+.navtab > label ~label ,
+.navtab > h2 ~h2{
   position: absolute;
   top: 0;
 }
@@ -148,12 +165,11 @@
   top:21em;
   left:0em;
 }
-.select_list label:hover {
+.select_list label:hover,.navtab label:hover  {
   cursor: pointer;
 }
-
 .select_list input:focus, .navtab input:focus{
-    outline: none;
+  outline: none;
 }
 
 
@@ -162,6 +178,7 @@
   background: #ae190e;
   left: 6%;
   width:88%;
+  margin: 2em 0;
 }
 
 .navtab img{
@@ -175,38 +192,6 @@
 .project3 p:last-of-type{
   top:1em;
   position: relative;
-}
-.navtab > label {
-  position: absolute;
-  z-index: 1;
-}
-
-
-.navtab > label,
-.navtab > h2 {
-  font-size: 1.1em;
-  height: 2em;
-  line-height: 2em;
-}
-
-
-.navtab > h2 {
-  position: relative;
-  margin: 0;
-  text-align: center;
-  background: #ae190e;
-  color: #fff;
-}
-
-.navtab > label {
-  border-right: 1px solid #fff;
-}
-
-.navtab input,
-.navtab > label ~ label,
-.navtab > h2 ~ h2 {
-  position: absolute;
-  top: 0;
 }
 
 
@@ -229,52 +214,11 @@
 }
 
 
-.navtab input + h2 + div {
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding:0 ;
-  border:0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
-
-.navtab input:checked + h2 + div {
-  position: static;
-  padding: 1em;
-  height: auto;
-  width: auto;
-}
-
-/**
- * shows a hand cursor only to pointing device users
- */
-.navtab label:hover {
-  cursor: pointer;
-}
-
 .navtab > div {
   background: #f0f0f0;
   padding: 1em;
 }
 
-/**
- * we hide radio buttons and also remove them from the flow
- */
-.navtab input {
-  opacity: 0;
-  position: absolute;
-}
-
-
-
-
-/**
- * visual cue of the selection
- */
-.navtab input:checked + h2 {
-  background: #6d0f09;
-}
 
 .navtab input:checked + h2:after {
   content: '';

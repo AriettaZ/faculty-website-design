@@ -5,7 +5,7 @@ student: 'phdStudent'
 <div class="lab_overview" id="overview">
   <h1>ReRout Lab Overview</h1>
   <%= image_tag 'rerout-sg.jpg' %>
-  <p>The <a href="http://web.cse.ohio-state.edu/~stewart.962/rerout.html">ReRout Lab</a> uses computer systems research to broaden participation in computer science.  Our premise is that novel, high-impact systems excite students, reach new classes of users, and demand diverse, out-of-the-box thinking. </p>
+  <p>The ReRout Lab uses computer systems research to broaden participation in computer science.  Our premise is that novel, high-impact systems excite students, reach new classes of users, and demand diverse, out-of-the-box thinking. </p>
   <div class="guild_list" >
     <p><strong> The following principles guide our work:</strong></p>
     <ol>
@@ -14,7 +14,7 @@ student: 'phdStudent'
       <li> Well-solved research problems can qualitatively change a user's interaction with their computer</li>
     </ol>
     <p>
-      <strong id="recruitment">I am currently looking for students. If you have already applied to OSU and you want to join the ReRout Lab, send me an email with your CV. Note, admission to OSU is highly selective. I can not reply to all good candidates.</strong>
+      <strong id="people_nav">I am currently looking for students. If you have already applied to OSU and you want to join the ReRout Lab, send me an email with your CV. Note, admission to OSU is highly selective. I can not reply to all good candidates.</strong>
     </p>
     </div>
 </div>
@@ -23,7 +23,7 @@ student: 'phdStudent'
     <div class="select_list">
       <label for="phdStudent" tabindex="0"></label>
       <input id="phdStudent" type="radio" name="group" checked="true" aria-hidden="true">
-      <h2 class="button"><span>PHD Students  </span></h2>
+      <h2><span>PHD Students  </span></h2>
       <div class="phdStudent student_info">
         <% data.student.phdStudent.each do |student| %>
         <p><strong><%= student["name"] %></strong>, <a href='<%= student["page"]  %>'>webpage</a></p>
@@ -33,7 +33,7 @@ student: 'phdStudent'
 
       <label for="masterStudent" tabindex="0"></label>
       <input id="masterStudent" type="radio" name="group" aria-hidden="true">
-      <h2 class="button" ><span>Master Students  </span></h2>
+      <h2><span>Master Students  </span></h2>
       <div class="masterStudent student_info">
           <% data.student.masterStudent.each do |student| %>
           <p><strong><%= student["name"] %></strong>, <span><%= student["intro"] %></span></p>
@@ -42,7 +42,7 @@ student: 'phdStudent'
 
       <label for="undergdStudent" tabindex="0"></label>
       <input id="undergdStudent" type="radio" name="group"  aria-hidden="true">
-      <h2 class="button" ><span>Undergraduate Students  </span></h2>
+      <h2><span>Undergraduate Students  </span></h2>
       <div class="undergdStudent student_info">
         <% data.student.undergdStudent.each do |student| %>
         <p><strong><%= student["name"] %></strong>, <span><%= student["intro"] %></span></p>
@@ -51,7 +51,7 @@ student: 'phdStudent'
 
       <label for="intern" tabindex="0"></label>
       <input id="intern" type="radio" name="group" aria-hidden="true">
-      <h2 class="button" id="project_nav"><span>Summer Interns  </span></h2>
+      <h2 id="project_nav"><span>Summer Interns  </span></h2>
       <div class="intern student_info">
         <% data.student.internStudent.each do |student| %>
         <p><strong><%= student["name"] %></strong>, <span><%= student["intro"] %></span></p>
