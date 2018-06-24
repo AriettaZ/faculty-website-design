@@ -48,16 +48,16 @@ title: Publication
 			</td>
 			<td class="link">
 				<% if publication.pdf_link.strip.length!=0 %>
-				<a class="pdf" <%= 'href=\"' +publication.pdf_link+ '\"'%>>pdf</a><br />
+				<a class="pdf" <%= 'href=' +publication.pdf_link%>>pdf</a><br />
 				<% end %>
 				<% if publication.ppt_link.strip.length!=0 %>
-				<a class="ppt" <%= 'href=\"' +publication.ppt_link+ '\"'%>>ppt</a><br />
+				<a class="ppt" <%= 'href=' +publication.ppt_link%>>ppt</a><br />
 				<% end %>
 				<% if publication.bibtex_link.strip.length!=0 %>
-				<a class="bib" <%= 'href=\"' +publication.bibtex_link+ '\"'%>>bibtex</a><br />
+				<a class="bib" <%= 'href=' +publication.bibtex_link%>>bibtex</a><br />
 				<% end %>
 				<% if publication.event_link.strip.length!=0 %>
-				<a class="event" <%= 'href=\"' +publication.event_link+ '\"'%>>event</a>
+				<a class="event" <%= 'href=' +publication.event_link%>>event</a>
 				<% end %>
 			</td>
 		</tr>
