@@ -5,14 +5,14 @@ title: Contact Information
 <!-- Author: Gail Chen
 Created: 6/20
 Edit: 6/21 Gail centered contents and aligned text.
-Edit: 6/24 Gail add hyperlinks for sending emails.
+Edit: 6/24 Gail use asset helper to send emails, use tag helpers to add images.
 Description: Contact information page with contact information, photos and links to personal pages. -->
 
 <div class="center" id="professional-info">
 	<!-- Contact Information -->
 	<h1>Contact Information</h1>
 	<ul>
-		<li>Email: <a class="email" href="mailto: cstewart@cse.ohio-state.edu">cstewart@cse.ohio-state.edu</a></li>
+		<li>Email: <%= mail_to 'cstewart@cse.ohio-state.edu', 'cstewart@cse.ohio-state.edu'%></li>
 		<li>Office: RM 793</li>
 		<li>Office phone: (614) 292-7325</li>
 		<li>Department of Computer Science and Engineering<br/>
@@ -30,39 +30,39 @@ Description: Contact information page with contact information, photos and links
 				<div class="slider">
 					<input type="radio" name="slide_switch" id="id1" checked/>
 					<label for="id1">
-	    		<img src="images/cstewart.2018.jpg" title="Professional image for web content (Low Quality 141 x 98)"/>
-	    	</label>
-					<img class="object-fit_contain" class="inner" src="images/cstewart.2018.jpg" title="Professional image for web content (Low Quality 141 x 98)" />
+						<%= tag :img, :src => "images/cstewart.2018.jpg", :title => "Professional image for web content (Low Quality 141 x 98)" %>
+	    		</label>
+					<%= tag :img, :class => "object-fit_contain", :src => "images/cstewart.2018.jpg", :title => "Professional image for web content (Low Quality 141 x 98)" %>
 
 					<input type="radio" name="slide_switch" id="id2" />
 					<label for="id2">
-	    		<img src="images/ohiopic2.jpg" title="Professional image for print (Higher quality 389 x 569)"/>
-	    	</label>
-					<img class="object-fit_contain" src="images/ohiopic2.jpg" title="Professional image for print (Higher quality 389 x 569)" />
+	    			<%= tag :img, :src => "images/ohiopic2.jpg", :title => "Professional image for print (Higher quality 389 x 569)" %>
+	    		</label>
+					<%= tag :img, :class => "object-fit_contain", :src => "images/ohiopic2.jpg", :title => "Professional image for print (Higher quality 389 x 569)" %>
 
 					<input type="radio" name="slide_switch" id="id3" />
 					<label for="id3">
-	    		<img src="images/chris1-lores.jpg" title="Casual image for web content (Quality)"/>
-	    	</label>
-					<img class="object-fit_contain" src="images/chris1-lores.jpg" title="Casual image for web content (Quality)" />
+	    			<%= tag :img, :src => "images/chris1-lores.jpg", :title => "Casual image for web content (Quality)" %>
+	    		</label>
+					<%= tag :img, :class => "object-fit_contain", :src => "images/chris1-lores.jpg", :title => "Casual image for web content (Quality)" %>
 
 					<input type="radio" name="slide_switch" id="id4" />
 					<label for="id4">
-	    		<img src="images/chris1-crop.jpg" title="Casual image for print (High quality 1789 x 2190)"/>
-	    	</label>
-					<img class="object-fit_contain" src="images/chris1-crop.jpg" title="Casual image for print (High quality 1789 x 2190)" />
+	    			<%= tag :img, :src => "images/chris1-crop.jpg", :title => "Casual image for print (High quality 1789 x 2190)" %>
+	    		</label>
+					<%= tag :img, :class => "object-fit_contain", :src => "images/chris1-crop.jpg", :title => "Casual image for print (High quality 1789 x 2190)" %>
 
 					<input type="radio" name="slide_switch" id="id5" />
 					<label for="id5">
-	    		<img src="images/rerout-bw.jpg" title="ReRout Lab Logo in black and white"/>
-	    	</label>
-					<img class="object-fit_contain" src="images/rerout-bw.jpg" title="ReRout Lab Logo in black and white" />
+	    			<%= tag :img, :src => "images/rerout-bw.jpg", :title => "ReRout Lab Logo in black and white" %>
+	    		</label>
+					<%= tag :img, :class => "object-fit_contain", :src => "images/rerout-bw.jpg", :title => "ReRout Lab Logo in black and white" %>
 
 					<input type="radio" name="slide_switch" id="id6" />
 					<label for="id6">
-	    		<img src="images/rerout-sg.jpg" title="ReRout Lab logo in scarlet and grey"/>
-	    	</label>
-					<img class="object-fit_contain" src="images/rerout-sg.jpg" title="ReRout Lab logo in scarlet and grey" />
+	    			<%= tag :img, :src => "images/rerout-sg.jpg", :title => "ReRout Lab logo in scarlet and grey" %>
+	    		</label>
+					<%= tag :img, :class => "object-fit_contain", :src => "images/rerout-sg.jpg", :title => "ReRout Lab logo in scarlet and grey" %>
 				</div>
 			</div>
 		</div>
@@ -73,9 +73,9 @@ Description: Contact information page with contact information, photos and links
 <!-- Links to personal pages -->
 <div class="content" id="info-links">
 	<p>
-		<a href="https://plus.google.com/u/0/+ChristopherStewartPhD">Google+ <img src="images/google+.png" /></a> |
-		<a href="https://scholar.google.com/citations?user=iYgWtREAAAAJ&hl=en">Google Scholar <img src="images/scholar.png" /></a> |
-		<a href="https://www.facebook.com/christopher.charles.stewart">Facebook <img src="images/facebook.png" /></a> |
+		<a href="https://plus.google.com/u/0/+ChristopherStewartPhD">Google+ <%= tag :img, :src => "images/google+.png" %></a> |
+		<a href="https://scholar.google.com/citations?user=iYgWtREAAAAJ&hl=en">Google Scholar <%= tag :img, :src => "images/scholar.png" %></a> |
+		<a href="https://www.facebook.com/christopher.charles.stewart">Facebook <%= tag :img, :src => "images/facebook.png" %></a> |
 		<a href="../data/cstewart.cv.pdf">Curriculum Vitae (out of date)</a>
 	</p>
 </div>
