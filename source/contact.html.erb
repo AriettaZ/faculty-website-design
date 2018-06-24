@@ -30,8 +30,10 @@ Description: Contact information page with contact information, photos and links
 				<div class="slider">
 					<input type="radio" name="slide_switch" id="id1" checked/>
 					<label for="id1">
+						<!-- Produces: <img src="images/cstewart.2018.jpg" title = "Professional image for web content (Low Quality 141 x 98)" /> -->
 						<%= tag :img, :src => "images/cstewart.2018.jpg", :title => "Professional image for web content (Low Quality 141 x 98)" %>
 	    		</label>
+					<!-- Produces: <img class = "object-fit_contain" src="images/cstewart.2018.jpg" title = "Professional image for web content (Low Quality 141 x 98)" /> -->
 					<%= tag :img, :class => "object-fit_contain", :src => "images/cstewart.2018.jpg", :title => "Professional image for web content (Low Quality 141 x 98)" %>
 
 					<input type="radio" name="slide_switch" id="id2" />
