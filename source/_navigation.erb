@@ -1,16 +1,16 @@
 <div class="navbar">
   <ul id="sitenav">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="publication.html">Publications</a></li>
-    <li><a href="awards.html">Awards</a></li>
-    <li class="dropdown">
-      <a href="lab.html">Lab</a>
+    <a href="index.html"><li <%= current_page.data.title=="Christopher Stewart"? "class='active'><i class='fas fa-home'></i>":">" %>  Home</li></a>
+    <a href="publication.html"><li <%= current_page.data.title=="Publication"? "class='active'><i class='fas fa-book-open'></i>":">" %>   Publications</li></a>
+    <a href="awards.html"><li <%= current_page.data.title=="Awards"? "class='active'><i class='fas fa-award'></i>":">" %>   Awards</li></a></li>
+    <li <%= current_page.data.title=="Lab"? "class='dropdown active'><i class='fas fa-flask'></i>":" class='dropdown' >" %>
+      <a href="lab.html">   Lab</a>
       <div class="dropdown-content">
-        <a href="lab.html#overview">Overview</a>
-        <a href="lab.html#people">People</a>
-        <a href="lab.html#projects">Projects</a>
+        <a href="lab.html" <%= current_page.data.title=="Lab"? "class='active'><i class='fas fa-flask'></i>":">" %>    Lab</a>
+        <a href="lab.html#people_nav">   People</a>
+        <a href="lab.html#project_nav">    Projects</a>
       </div>
     </li>
-    <li><a href="contact.html">Contact</a></li>
+    <a href="contact.html"><li <%= current_page.data.title=="Contact Information"? "class='active'><i class='fas fa-envelope'></i>":">" %>  Contact</li></a>
   </ul>
 </div>
