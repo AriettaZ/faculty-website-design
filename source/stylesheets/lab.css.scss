@@ -183,17 +183,11 @@
 
 .navtab img{
   float: left;
-  width: 22%;
+  width: 20%;
   display: inline ;
   position: relative;
   margin: 1em;
 }
-
-.project3 p:last-of-type{
-  top:1em;
-  position: relative;
-}
-
 
 .navtab label:nth-child(1),
 .navtab >p:nth-child(3) {
@@ -233,7 +227,7 @@
   border-right: 10px solid transparent;
   border-top: 10px solid #6d0f09;
 }
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1165px) {
 
   .select_list input:checked + p + div.student_info  {
       width: 75%;
@@ -262,7 +256,7 @@
   }
   .select_list  label,
   .select_list  > p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     width: 23%;
     height: 8em;
     line-height: 4em;
@@ -295,9 +289,13 @@
   }
   .navtab > label,
   .navtab > p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     height: 6em;
     line-height:3em;
+  }
+
+  .navtab img{
+    top:1em;
   }
 }
 @media screen and (max-width: 1008px) {
@@ -306,7 +304,7 @@
   }
   .select_list  label,
   .select_list  > p {
-    font-size: 1em;
+    font-size: 1.1em;
     width: 23%;
     height: 9em;
     line-height: 4em;
@@ -347,21 +345,27 @@
     left:0em;
   }
   .select_list{
-    height:40em;
+    height:39em;
   }
+
+  .navtab img{
+    width: 20%;
+    display: inline ;
+    position: relative;
+    margin: 1em 1em 0em 0em;
+    top:0em;
+  }
+
 }
 @media screen and (max-width: 850px) {
-
-
-
-}
-@media screen and (max-width: 720px) {
-
   .navtab label,
-  .navtab input {
+  .navtab input,.navtab> p{
     display: none;
   }
-
+  .select_list  label,
+  .select_list  > p {
+    font-size: 1.0em;
+  }
   /* reveal all panels */
   .navtab > input + p + div {
     display: block;
@@ -371,12 +375,12 @@
     width: auto;
   }
 
-  .navtab p {
+  .navtab> p {
     width: auto;
     position: static;
   }
 
-  .navtab p:after {
+  .navtab >p:after {
     display: none;
   }
 
