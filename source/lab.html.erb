@@ -6,11 +6,12 @@ Created: 6/20
 Edit: 6/20 Ariel create data file student.json and link data to page
       6/21 Ariel add projects and people list
       6/23 Ariel add navtab and select list style
+      6/23 Gail display pictures properly
 Description:.ReRout overview, people list and project introduction -->
 
 <div class="lab_overview" id="overview">
   <h1>ReRout Lab Overview</h1>
-  <%= image_tag 'rerout-sg.jpg' %>
+  <%= tag :img, :src => "images/rerout-sg.jpg" %>
   <p>The ReRout Lab uses computer systems research to broaden participation in computer science.  Our premise is that novel, high-impact systems excite students, reach new classes of users, and demand diverse, out-of-the-box thinking. </p>
   <div class="guild_list" >
     <p><strong> The following principles guide our work:</strong></p>
@@ -74,7 +75,7 @@ Description:.ReRout overview, people list and project introduction -->
     <input id="project1" type="radio" name="project" checked="true" aria-hidden="true">
     <h2>Greening as a Service</h2>
     <div>
-      <%= image_tag 'mantismail.png' %>
+      <%= tag :img, :src => "images/mantismail.png" %>
       <h2>Greening as a Service</h2>
       <p>(Supported by: NSF CSR SMALL )</p>
       <p>(Collaborators: Microsoft Research, Oak Ridge National Labs, Morehouse College, NCWIT, OSU Office of Diversity and Inclusion ) </p>
@@ -141,9 +142,8 @@ Description:.ReRout overview, people list and project introduction -->
       <p><a href="http://web.cse.ohio-state.edu/~stewart.962/Papers/kelleydcperf13.pdf">Balanced and Predictable Networked Storage, DCPerf 2013</a></p>
       <h3>Media and Press Release:</h3>
       <a href="http://www.youtube.com/embed/eiA5Uo1uJHI" target="_blank">
-  			  <img src="http://www.cse.ohio-state.edu/~cstewart/images/qa.vig.jpg" alt="Outreach Effort"></a>
-      <p>
-  Outreach Event:  We recently brought middle school students participating in Camp Engineer to the ReRout Labs for a friendly Jeopardy match.  The middle schools students competed againt our Open Ephyra system (Open Ephyra is a question answering system like IBM Watson).  The Youtube video to the left summarizes the event and unveils the winner.</p>
+  		<img src="http://www.cse.ohio-state.edu/~cstewart/images/qa.vig.jpg" alt="Outreach Effort"></a>
+      <p>Outreach Event:  We recently brought middle school students participating in Camp Engineer to the ReRout Labs for a friendly Jeopardy match.  The middle schools students competed againt our Open Ephyra system (Open Ephyra is a question answering system like IBM Watson).  The Youtube video to the left summarizes the event and unveils the winner.</p>
       </div>
 </div>
 </div>
