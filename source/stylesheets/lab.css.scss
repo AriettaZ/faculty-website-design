@@ -1,21 +1,22 @@
 .lab_overview {
   height: 26em;
-  display: inline-block;
 }
 .lab_overview h1{
   margin-top: 0px;
 }
-.lab_overview img{
+.lab_intro img{
   top:4em;
   left: 6%;
-  width: 30%;
+  // width: 30%;
   position: absolute;
 }
-
-.lab_overview > p{
+.lab_intro{
+  width:80%
+}
+.lab_intro p{
   left:40%;
   position:absolute;
-  width: 52%;
+  // width: 52%;
   top: 5em;
 }
 
@@ -23,7 +24,6 @@
   position:absolute;
   top: 14em;
   left: 6%;
-  width: 88%;
   display: block;
 }
 
@@ -33,7 +33,6 @@
 .select_list {
   list-style-type: none;
   height: 35em;
-  width: 90%;
   position: relative;
   text-align: center;
   margin:0;
@@ -41,21 +40,23 @@
 }
 
 .select_list  label,
-.select_list  h2 {
+.select_list  > p {
   font-size: 1.2em;
-  width: 38%;
+  width: 32%;
   height: 7em;
   line-height: 7em;
 }
-
+.select_list  p{
+  margin: 1em;
+}
 .navtab > label,
-.navtab > h2 {
+.navtab > p {
   font-size: 1.1em;
   height: 3em;
   line-height: 3em;
 }
 
-.select_list  h2, .navtab > h2 {
+.select_list >p , .navtab > p {
   position: relative;
   margin: 0;
   text-align: center;
@@ -97,27 +98,27 @@
   transition: 0.5s;
 }
 
-.select_list input:hover + h2 span{
+.select_list input:hover + p span{
   padding-right: 25px;
 }
 
-.select_list input:hover + h2 span:after {
+.select_list input:hover + p span:after {
   opacity: 1;
   right: 0;
   z-index: 10;
 }
 
-.select_list input:checked + h2,.navtab input:checked + h2  {
+.select_list input:checked + p,.navtab input:checked + p  {
   background: #6d0f09;
 }
 
-.select_list input:checked + h2 + div.student_info , .navtab input:checked + h2 + div{
+.select_list input:checked + p + div.student_info , .navtab input:checked + p + div{
     position: static;
     padding: 1em;
     height: auto;
     width: auto;
 }
-.navtab input + h2 + div, .select_list  input + h2 + div.student_info  {
+.navtab input + p + div, .select_list  input + p + div.student_info  {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   padding:0 ;
@@ -127,40 +128,42 @@
   overflow: hidden;
 }
 
-.select_list input:checked + h2 + div.student_info  {
-    width: 50%;
+.select_list input:checked + p + div.student_info  {
+    width: 65%;
     float: right;
+    position: relative;
+    bottom: 2em;
 }
 .select_list >input,
 .select_list >label,
-.select_list > h2,
+.select_list > p,
 .navtab > input,
 .navtab > label ~label ,
-.navtab > h2 ~h2{
+.navtab > p ~p{
   position: absolute;
   top: 0;
 }
 
 .select_list label:nth-child(1),
-.select_list h2:nth-child(3) {
+.select_list > p:nth-child(3) {
   top: 0em;
   left:0em;
 }
 
 .select_list label:nth-child(5),
-.select_list h2:nth-child(7) {
+.select_list > p:nth-child(7) {
   top: 7em;
   left:0em;
 }
 
 .select_list label:nth-child(9),
-.select_list h2:nth-child(11) {
+.select_list > p:nth-child(11) {
   top:14em;
   left:0em;
 }
 
 .select_list label:nth-child(13),
-.select_list h2:nth-child(15) {
+.select_list > p:nth-child(15) {
   top:21em;
   left:0em;
 }
@@ -193,19 +196,19 @@
 
 
 .navtab label:nth-child(1),
-.navtab h2:nth-child(3) {
+.navtab >p:nth-child(3) {
   left: 0%;
   width: 31%;
 }
 
 .navtab label:nth-child(5),
-.navtab h2:nth-child(7) {
+.navtab >p:nth-child(7) {
   left: 31%;
   width: 38%;
 }
 
 .navtab label:nth-child(9),
-.navtab h2:nth-child(11) {
+.navtab >p:nth-child(11) {
   left: 69%;
   width: 31%;
 }
@@ -217,7 +220,7 @@
 }
 
 
-.navtab input:checked + h2:after {
+.navtab input:checked + p:after {
   content: '';
   margin: auto;
   position: absolute;
@@ -230,9 +233,129 @@
   border-right: 10px solid transparent;
   border-top: 10px solid #6d0f09;
 }
+@media screen and (max-width: 1150px) {
+
+  .select_list input:checked + p + div.student_info  {
+      width: 75%;
+  }
+
+  .lab_intro img{
+    top:3em;
+    left: 0%;
+    // width: 30%;
+    position: absolute;
+  }
+  .lab_intro{
+    width:100%
+  }
+  .lab_intro p{
+    left:40%;
+    position:absolute;
+    // width: 52%;
+    top: 3em;
+  }
+  .lab_overview .guild_list{
+  left:0%;
+  }
+  .lab_overview p{
+    margin-top:0;
+  }
+  .select_list  label,
+  .select_list  > p {
+    font-size: 1.1em;
+    width: 23%;
+    height: 8em;
+    line-height: 4em;
+  }
+  .select_list label:nth-child(1),
+  .select_list > p:nth-child(3) {
+    top: 0em;
+    left:0em;
+  }
+
+  .select_list label:nth-child(5),
+  .select_list > p:nth-child(7) {
+    top: 8em;
+    left:0em;
+  }
+
+  .select_list label:nth-child(9),
+  .select_list > p:nth-child(11) {
+    top:16em;
+    left:0em;
+  }
+
+  .select_list label:nth-child(13),
+  .select_list > p:nth-child(15) {
+    top:24em;
+    left:0em;
+  }
+  .select_list{
+    height:38em;
+  }
+  .navtab > label,
+  .navtab > p {
+    font-size: 1.1em;
+    height: 6em;
+    line-height:3em;
+  }
+}
+@media screen and (max-width: 1008px) {
+  .lab_overview{
+    height: 28em;
+  }
+  .select_list  label,
+  .select_list  > p {
+    font-size: 1em;
+    width: 23%;
+    height: 9em;
+    line-height: 4em;
+  }
+
+  .lab_intro img{
+    top:3em;
+    left: 0%;
+    width: 38%;
+    position: absolute;
+  }
+  .lab_intro p{
+    left:40%;
+    position:absolute;
+    top: 3em;
+  }
+  .select_list label:nth-child(1),
+  .select_list > p:nth-child(3) {
+    top: 0em;
+    left:0em;
+  }
+
+  .select_list label:nth-child(5),
+  .select_list > p:nth-child(7) {
+    top: 9em;
+    left:0em;
+  }
+
+  .select_list label:nth-child(9),
+  .select_list > p:nth-child(11) {
+    top:18em;
+    left:0em;
+  }
+
+  .select_list label:nth-child(13),
+  .select_list > p:nth-child(15) {
+    top:27em;
+    left:0em;
+  }
+  .select_list{
+    height:40em;
+  }
+}
+@media screen and (max-width: 850px) {
 
 
-@media screen and (max-width: 45em) {
+
+}
+@media screen and (max-width: 720px) {
 
   .navtab label,
   .navtab input {
@@ -240,7 +363,7 @@
   }
 
   /* reveal all panels */
-  .navtab > input + h2 + div {
+  .navtab > input + p + div {
     display: block;
     position: static;
     padding: 1em;
@@ -248,13 +371,12 @@
     width: auto;
   }
 
-  .navtab h2 {
+  .navtab p {
     width: auto;
     position: static;
-    background: #ae190e ;
   }
 
-  .navtab h2:after {
+  .navtab p:after {
     display: none;
   }
 
