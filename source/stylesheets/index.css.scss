@@ -1,4 +1,4 @@
-
+// Home Page stylesheet
 #bio-pic div {
   overflow: hidden;
   font-weight: bold;
@@ -26,3 +26,10 @@
   display: inline-block;
   vertical-align: middle;
   position: relative; }
+
+hr{
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
