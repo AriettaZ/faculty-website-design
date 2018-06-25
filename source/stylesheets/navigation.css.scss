@@ -58,3 +58,10 @@
     background-color: #6d0f09;
     font-weight: 1100;
 }
+
+@media screen and (max-width: 840px) {
+  .navbar ul{
+    width: 100%;
+    padding: 0px;
+  }
+}
