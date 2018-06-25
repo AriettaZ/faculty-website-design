@@ -11,6 +11,13 @@ GEM
     autoprefixer-rails (8.6.3)
       execjs
     backports (3.11.3)
+    capybara (2.18.0)
+      addressable
+      mini_mime (>= 0.1.3)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (>= 2.0, < 4.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -19,6 +26,7 @@ GEM
       sass (>= 3.2, < 3.5)
     concurrent-ruby (1.0.5)
     contracts (0.13.0)
+    diff-lcs (1.3)
     dotenv (2.4.0)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
@@ -82,7 +90,11 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
+    mini_mime (1.0.0)
+    mini_portile2 (2.3.0)
     minitest (5.11.3)
+    nokogiri (1.8.3)
+      mini_portile2 (~> 2.3.0)
     padrino-helpers (0.13.3.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.13.3.4)
@@ -94,9 +106,25 @@ GEM
     rack (2.0.5)
     rack-livereload (0.3.17)
       rack
+    rack-test (1.0.0)
+      rack (>= 1.0, < 3)
+    rake (10.5.0)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rspec (3.7.0)
+      rspec-core (~> 3.7.0)
+      rspec-expectations (~> 3.7.0)
+      rspec-mocks (~> 3.7.0)
+    rspec-core (3.7.1)
+      rspec-support (~> 3.7.0)
+    rspec-expectations (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-mocks (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-support (3.7.1)
     sass (3.4.25)
     servolux (0.13.0)
     temple (0.8.0)
@@ -107,14 +135,19 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    xpath (3.1.0)
+      nokogiri (~> 1.8)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  capybara (~> 2.5)
   middleman (~> 4.2)
   middleman-autoprefixer (~> 2.7)
   middleman-livereload (~> 3.4, >= 3.4.6)
+  rake (~> 10.4)
+  rspec (~> 3.4)
   tzinfo-data
   wdm (~> 0.1)
 

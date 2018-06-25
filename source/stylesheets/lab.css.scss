@@ -1,7 +1,8 @@
-// Author: Ariel Zhu
-// Created: 6/20
-// Edit: N/A
-// Description: Lab page styling
+//Author: Ariel
+//Created: 6/20
+//Edit: Ariel 6/21 add people part
+//Edit: Ariel 6/23 add project part
+// Description: Styling for lab page
 .lab_overview {
   height: 26em;
 }
@@ -115,13 +116,15 @@
 .select_list input:checked + p,.navtab input:checked + p  {
   background: #6d0f09;
 }
-
+// sizing and positioning visible info
 .select_list input:checked + p + div.student_info , .navtab input:checked + p + div{
     position: static;
     padding: 1em;
     height: auto;
     width: auto;
 }
+
+// set invisible info
 .navtab input + p + div, .select_list  input + p + div.student_info  {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
@@ -131,7 +134,7 @@
   width: 1px;
   overflow: hidden;
 }
-
+// sizing and positioning visible info
 .select_list input:checked + p + div.student_info  {
     width: 65%;
     float: right;
@@ -147,7 +150,7 @@
   position: absolute;
   top: 0;
 }
-
+// sizing select list
 .select_list label:nth-child(1),
 .select_list > p:nth-child(3) {
   top: 0em;
@@ -171,6 +174,8 @@
   top:21em;
   left:0em;
 }
+
+// set the cursor to small hand
 .select_list label:hover,.navtab label:hover  {
   cursor: pointer;
 }
@@ -178,7 +183,7 @@
   outline: none;
 }
 
-
+// sizing and positioning navtab
 .navtab {
   position: relative;
   background: #ae190e;
@@ -192,7 +197,7 @@
   position: relative;
   margin: 1em;
 }
-
+// sizing nav tabs
 .navtab label:nth-child(1),
 .navtab >p:nth-child(3) {
   left: 0%;
@@ -217,7 +222,7 @@
   padding: 1em;
 }
 
-
+// add small arrow at the bottom of nav tab
 .navtab input:checked + p:after {
   content: '';
   margin: auto;
@@ -231,6 +236,8 @@
   border-right: 10px solid transparent;
   border-top: 10px solid #6d0f09;
 }
+
+// when screen is smaller than 1165px
 @media screen and (max-width: 1165px) {
 
   .select_list input:checked + p + div.student_info  {
@@ -302,6 +309,8 @@
     top:1em;
   }
 }
+
+// when screen is smaller than 1008px
 @media screen and (max-width: 1008px) {
   .lab_overview{
     height: 28em;
@@ -361,6 +370,8 @@
   }
 
 }
+
+// when screen is smaller than 850px
 @media screen and (max-width: 850px) {
   .navtab label,
   .navtab input,.navtab> p{
