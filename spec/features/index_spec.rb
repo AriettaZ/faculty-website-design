@@ -1,3 +1,11 @@
+# Author: Ariel Zhu
+# Created: 6/25
+# Edit: 6/25 Gail add test plan
+# Test plan:
+# 1. Correct header
+# 2. Correct subheaders
+# 3. correct image
+
 require_relative '../spec_helper'
 
 describe 'index', :type => :feature do
