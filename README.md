@@ -17,8 +17,6 @@ window size is recommended.
 ***
 
 ### Team
-<img src="https://raw.githubusercontent.com/cse3901-osu-2018su/MAGiC-Project-2-Ruby-Game-of-Set/ariel_dev/magic.png?token=AVn9GV61Zs0E_28kxcSKBh9xgh9hrJH7ks5bF1mswA%3D%3D" width="400">
-
 | Role|Team Member|
 | ------------- |-------------|
 | Overall Project Manager|Gail Chen|
@@ -38,7 +36,7 @@ Mike:
 * publication.rb
 * footer.css.scss
 * publication.css.scss
-* `_`footer.erb
+* &#95;footer.erb
 * publication.html.erb
 
 Channing:
@@ -47,7 +45,7 @@ Channing:
 * awards_scraper.rb
 * awards.css.scss
 * navigation.css.scss
-* `_`naviation.erb
+* &#95;naviation.erb
 * awards.html.erb
 * README.md
 
