@@ -60,10 +60,11 @@ accomp_list = scraper.accomp_page.search(".entry p")
 link_list = scraper.accomp_page.links_with(text: "[more]").map {|link| link.uri.to_s}
 accomp_list.size.times {|index|
   award = Award.new
-  award.title = accomp_list[index].at("span").text
+  award.title = accomp_list[index].at("span").text.gsub(/[[:space:]]/, ' ').strip
   raw_description = accomp_list[index].text.chomp
-  award.description = raw_description[0,raw_description.length-7].gsub(/[[:space:]]/, ' ').strip
+  award.description = raw_description[0,raw_description.length-7].gsub(/[[:space:]]/, ' ')
   award.description.sub!(/((jan|feb).*ary|(sep|oct|nov|dec).*ber|march|april|may|june|july|august) [\d]{4}/i, "")
+  award.description = award.description.strip
   award.link = link_list[index]
   awards << award
 }

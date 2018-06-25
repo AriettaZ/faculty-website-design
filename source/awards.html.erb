@@ -1,5 +1,6 @@
 ---
 title: Awards
+css: awards.css
 ---
 <!--
   Created by: Channing Jacobs
@@ -17,6 +18,7 @@ title: Awards
 
 <div id="awards_container">
 <% awards.each_index do |award_index| %>
+
   <% if award_index == 0 %>
     <div id="favorite_awards"></div>
     <hr>
@@ -41,9 +43,13 @@ title: Awards
 <% end %>
 </div>
 
+<!-- Side menu to jump to favorite and other awards -->
 <aside id="awards_sidebar">
   <li>
-    <a href="#favorite_awards">Fav</a>
+    Awards
+  </li>
+  <li>
+    <a href="#favorite_awards">Favorite</a>
   </li>
   <li>
     <a href="#other_awards">Other</a>
