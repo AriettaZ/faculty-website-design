@@ -4,4 +4,6 @@ describe 'awards', :type => :feature do
   before do
     visit '/awards.html'
   end
+
+
 end

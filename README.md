@@ -55,7 +55,6 @@ Gail:
 * contact.html.erb
 * index.html.erb
 
-
 Ariel:
 * lab.css.scss
 * site.css.scss
@@ -74,9 +73,12 @@ Channing:
 Ariel:
 * unit testing index page
 * unit testing publication page
+* unit testing lab page
 
 Gail:
 * unit testing navigation bar partial/css
+* unit testing contact page
+* unit testing awards page
 
 ##### System testing conducted by all members
 
