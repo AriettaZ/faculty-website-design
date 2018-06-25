@@ -1,0 +1,13 @@
+#awards_container {
+  //background-color: black;
+  div:nth-child(odd) {
+    background-color: #white;
+  }
+  div:nth-child(even) {
+    background-color: white;
+  }
+}
+
+#awards_heading {
+  min-width: 500px;
+}
