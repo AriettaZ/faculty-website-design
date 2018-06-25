@@ -6,12 +6,15 @@ Created: 6/20
 Edit: 6/20 Ariel create data file student.json and link data to page
       6/21 Ariel add projects and people list
       6/23 Ariel add navtab and select list style
+      6/23 Gail display pictures properly
 Description:.ReRout overview, people list and project introduction -->
 
 <div class="lab_overview" id="overview">
   <h1>ReRout Lab Overview</h1>
-  <%= image_tag 'rerout-sg.jpg' %>
-  <p>The ReRout Lab uses computer systems research to broaden participation in computer science.  Our premise is that novel, high-impact systems excite students, reach new classes of users, and demand diverse, out-of-the-box thinking. </p>
+  <div class="lab_intro">
+    <%= tag :img, :src => "images/rerout-sg.jpg" %>
+    <p>The ReRout Lab uses computer systems research to broaden participation in computer science.  Our premise is that novel, high-impact systems excite students, reach new classes of users, and demand diverse, out-of-the-box thinking. </p>
+  </div>
   <div class="guild_list" >
     <p><strong> The following principles guide our work:</strong></p>
     <ol>
@@ -29,7 +32,7 @@ Description:.ReRout overview, people list and project introduction -->
     <div class="select_list">
       <label for="phdStudent" tabindex="0"></label>
       <input id="phdStudent" type="radio" name="group" checked="true" aria-hidden="true">
-      <h2><span>PHD Students  </span></h2>
+      <p><span>PHD Students  </span></p>
       <div class="phdStudent student_info">
         <% data.student.phdStudent.each do |student| %>
         <p><strong><%= student["name"] %></strong>, <a href='<%= student["page"]  %>'>webpage</a></p>
@@ -39,7 +42,7 @@ Description:.ReRout overview, people list and project introduction -->
 
       <label for="masterStudent" tabindex="0"></label>
       <input id="masterStudent" type="radio" name="group" aria-hidden="true">
-      <h2><span>Master Students  </span></h2>
+      <p><span>Master Students  </span></p>
       <div class="masterStudent student_info">
           <% data.student.masterStudent.each do |student| %>
           <p><strong><%= student["name"] %></strong>, <span><%= student["intro"] %></span></p>
@@ -48,7 +51,7 @@ Description:.ReRout overview, people list and project introduction -->
 
       <label for="undergdStudent" tabindex="0"></label>
       <input id="undergdStudent" type="radio" name="group"  aria-hidden="true">
-      <h2><span>Undergraduate Students  </span></h2>
+      <p><span>Undergraduate Students  </span></p>
       <div class="undergdStudent student_info">
         <% data.student.undergdStudent.each do |student| %>
         <p><strong><%= student["name"] %></strong>, <span><%= student["intro"] %></span></p>
@@ -57,7 +60,7 @@ Description:.ReRout overview, people list and project introduction -->
 
       <label for="intern" tabindex="0"></label>
       <input id="intern" type="radio" name="group" aria-hidden="true">
-      <h2 id="project_nav"><span>Summer Interns  </span></h2>
+      <p id="project_nav"><span>Summer Interns  </span></p>
       <div class="intern student_info">
         <% data.student.internStudent.each do |student| %>
         <p><strong><%= student["name"] %></strong>, <span><%= student["intro"] %></span></p>
@@ -68,44 +71,43 @@ Description:.ReRout overview, people list and project introduction -->
 </div>
 
 <div class="projects" id="projects">
-  <h1><i class="fas fa-folder"></i>  Projects</h1>
+  <h1><i class="fas fa-folder"></i> Projects</h1>
   <div class="navtab">
     <label for="project1" tabindex="0"></label>
     <input id="project1" type="radio" name="project" checked="true" aria-hidden="true">
-    <h2>Greening as a Service</h2>
+    <p>Greening as a Service</p>
     <div>
-      <%= image_tag 'mantismail.png' %>
+      <%= tag :img, :src => "images/mantismail.png" %>
       <h2>Greening as a Service</h2>
       <p>(Supported by: NSF CSR SMALL )</p>
       <p>(Collaborators: Microsoft Research, Oak Ridge National Labs, Morehouse College, NCWIT, OSU Office of Diversity and Inclusion ) </p>
+      <h2>Research Challenge:</h2>
+      <p>
+        Internet services that provide search, e-commerce, and social networking have changed the world, but their growing carbon footprint is a concern.  By 2020, the annual carbon footprint of hosting centers worldwide is expected to exceed the footprint of the Netherlands.  Massive carbon footprints contribute to climate change and could lead to costly, punitive regulations.  Our research attempts to slow the growth of carbon footprints by moving Internet services to clean energy.  The challenge is that, as of today, most sources of clean energy are more expensive per joule than dirty sources.
 
-  <h2>Research Challenge:</h2>
-  <p>
-    Internet services that provide search, e-commerce, and social networking have changed the world, but their growing carbon footprint is a concern.  By 2020, the annual carbon footprint of hosting centers worldwide is expected to exceed the footprint of the Netherlands.  Massive carbon footprints contribute to climate change and could lead to costly, punitive regulations.  Our research attempts to slow the growth of carbon footprints by moving Internet services to clean energy.  The challenge is that, as of today, most sources of clean energy are more expensive per joule than dirty sources.
+      </p>
+      <p>
+        We propose greening services, a new type of service that aligns clean energy goals with profit incentives.  Greening services use clean energy to power requests routed through their servers, even if those requests access servers run by other services.   In other words, a greening service is a service that makes other services green.  In our vision, greening services will use renewable energy credits or carbon offsets.  These transferable certificates undo greenhouse-gas emissions transparently, even when emissions occur in carbon-heavy areas, making them attractive to large-scale, geographically distributed services.
+      </p>
+      <p>
+        Greening services work because some users will prefer to route their requests through environmentally sustainable services.  Greening services can profit from those users without incurring the full costs of running large scale services.  However, greening services must manage their costs.  Our systems research studies the potential for caching on greening services.  We also study the challenge of accurately accounting the carbon footprint of remote servers.
+      </p>
+      <h3>Recommended Reading: </h3>
+      <p><a href="http://web.cse.ohio-state.edu/~stewart.962/Papers/dengicac12.pdf">Adaptive Green Hosting, ICAC 2012</a></p>
+      <p><a href="http://web.cse.ohio-state.edu/~stewart.962/Papers/dengissst11.pdf">ISSST 2010 (Third Best Paper)</a></p>
+      <h3>Impact: </h3>
+      <p>
+        <a href="https://www.datagreening.com/">Datagreening.com</a> is prototype greening service.  It moves email (specifically, IMAP) to clean energy.  The site is publically accessible in the Beta version.  Our goal is to offset 2 Tonnes of CO2E in 2014.  We support any type of email that can be accessed through IMAP, in particular we often host GMail, Yahoo, Hotmail users.
+      </p>
+      <h3>Media and Press Release:</h3>
+      <p>
+        Visit <a href="https://www.datagreening.com">https://www.datagreening.com</a>
 
-  </p>
-  <p>
-    We propose greening services, a new type of service that aligns clean energy goals with profit incentives.  Greening services use clean energy to power requests routed through their servers, even if those requests access servers run by other services.   In other words, a greening service is a service that makes other services green.  In our vision, greening services will use renewable energy credits or carbon offsets.  These transferable certificates undo greenhouse-gas emissions transparently, even when emissions occur in carbon-heavy areas, making them attractive to large-scale, geographically distributed services.
-  </p>
-  <p>
-    Greening services work because some users will prefer to route their requests through environmentally sustainable services.  Greening services can profit from those users without incurring the full costs of running large scale services.  However, greening services must manage their costs.  Our systems research studies the potential for caching on greening services.  We also study the challenge of accurately accounting the carbon footprint of remote servers.
-  </p>
-  <h3>Recommended Reading: </h3>
-  <p><a href="http://web.cse.ohio-state.edu/~stewart.962/Papers/dengicac12.pdf">Adaptive Green Hosting, ICAC 2012</a></p>
-  <p><a href="http://web.cse.ohio-state.edu/~stewart.962/Papers/dengissst11.pdf">ISSST 2010 (Third Best Paper)</a></p>
-  <h3>Impact: </h3>
-  <p>
-    <a href="https://www.datagreening.com/">Datagreening.com</a> is prototype greening service.  It moves email (specifically, IMAP) to clean energy.  The site is publically accessible in the Beta version.  Our goal is to offset 2 Tonnes of CO2E in 2014.  We support any type of email that can be accessed through IMAP, in particular we often host GMail, Yahoo, Hotmail users.
-  </p>
-  <h3>Media and Press Release:</h3>
-  <p>
-    Visit <a href="https://www.datagreening.com">https://www.datagreening.com</a>
-
-  </p>
+      </p>
     </div>
     <label for="project2" tabindex="0"></label>
     <input id="project2" type="radio" name="project" aria-hidden="true">
-    <h2>High Performance Cloud Infrastructure</h2>
+    <p>High Performance Cloud Infrastructure</p>
     <div class="project2">
       <h2>High Performance Cloud Infrastructure</h2>
       <p>(Supported by: NSF CSR SMALL , Amazon Equipment Grant, Nationwide Children's Hostpital ) </p>
@@ -130,7 +132,7 @@ Description:.ReRout overview, people list and project introduction -->
     </div>
     <label for="project3" tabindex="0"></label>
     <input id="project3" type="radio" name="project" aria-hidden="true">
-    <h2>Quality Aware Management</h2>
+    <p>Quality Aware Management</p>
     <div class="project3">
       <h2>Quality Aware Management</h2>
       <p>(Supported by: NSF CSR SMALL ) </p>
@@ -141,10 +143,8 @@ Description:.ReRout overview, people list and project introduction -->
       <p><a href="http://web.cse.ohio-state.edu/~stewart.962/Papers/kelleyladis13.pdf">Cache Provisioning for Interactive NLP Services, LADiS 2013 </a></p>
       <p><a href="http://web.cse.ohio-state.edu/~stewart.962/Papers/kelleydcperf13.pdf">Balanced and Predictable Networked Storage, DCPerf 2013</a></p>
       <h3>Media and Press Release:</h3>
-      <a href="http://www.youtube.com/embed/eiA5Uo1uJHI" target="_blank">
-  			  <img src="http://www.cse.ohio-state.edu/~cstewart/images/qa.vig.jpg" alt="Outreach Effort"></a>
-      <p>
-  Outreach Event:  We recently brought middle school students participating in Camp Engineer to the ReRout Labs for a friendly Jeopardy match.  The middle schools students competed againt our Open Ephyra system (Open Ephyra is a question answering system like IBM Watson).  The Youtube video to the left summarizes the event and unveils the winner.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/eiA5Uo1uJHI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <p>Outreach Event:  We recently brought middle school students participating in Camp Engineer to the ReRout Labs for a friendly Jeopardy match.  The middle schools students competed againt our Open Ephyra system (Open Ephyra is a question answering system like IBM Watson).  The Youtube video to the left summarizes the event and unveils the winner.</p>
       </div>
 </div>
 </div>
