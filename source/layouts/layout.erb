@@ -11,20 +11,16 @@
     <meta charset="utf-8">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "No Frontmatter" %></title>
+    <!-- Global css and linking -->
     <base target="_top">
   	<link rel="stylesheet" href="stylesheets/site.css" />
   	<link rel="stylesheet" href="stylesheets/navigation.css" />
   	<link rel="stylesheet" href="stylesheets/footer.css" />
-
-  	<link rel="stylesheet" href="stylesheets/index.css" />
-    <link rel="stylesheet" href="stylesheets/lab.css" />
-    <link rel="stylesheet" href="stylesheets/contact.css" />
-    <link rel="stylesheet" href="stylesheets/publication.css" />
-    <link rel="stylesheet" href="stylesheets/awards.css" />
     <link rel="stylesheet" href="stylesheets/fontawesome-5.1.0/css/all.css" />
-
+    <!-- Specific css for individual page -->
+    <link rel="stylesheet" href="stylesheets/<%= current_page.data.css %>"/>
   </head>
-  <body>
+  <body id="main">
     <%= partial "navigation" %>
     <div class="content-container">
     <%= yield %>
