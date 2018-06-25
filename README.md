@@ -11,8 +11,7 @@
 ***
 
 ### Overview
-The MAGiC team was tasked with redesigning a static web site. The site chosen was Professor Stewart's [website](http://web.cse.ohio-state.edu/~stewart.962/). To view the redesigned website, open the *build* folder inside the main project folder. Then open the *index.html* page in Firefox. The website is not fully dynamic; thus a larger
-window size is recommended.
+The MAGiC team was tasked with redesigning a static web site. The site chosen was Professor Stewart's [website](http://web.cse.ohio-state.edu/~stewart.962/). To view the redesigned website, open the *build* folder inside the main project folder. Then open the *index.html* page in Firefox. The website is not fully dynamic when viewport is under 850px; thus a larger window size is recommended.
 
 ***
 
