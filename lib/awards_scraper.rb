@@ -1,3 +1,11 @@
+=begin
+  Created by: Channing Jacobs
+  Date: 6/24
+  Description: Webscraper to collect information from Stewart's website and
+  place it into Award objects. This helps to simplify static site content
+  generation.
+=end
+
 require_relative "award.rb"
 require "mechanize"
 

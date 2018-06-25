@@ -1,23 +1,51 @@
 ---
 title: Awards
 ---
+<!--
+  Created by: Channing Jacobs
+  Date: 6/24
+  Description: Awards HTML page generation.
+-->
+
 <% require_relative "../lib/award.rb" %>
 <% awards = Marshal.load File.read("data/awards_data") %>
 
 <div id="awards_heading">
   <h1>Awards and Accomplishments</h1>
-  <hr>
+  <br>
 </div>
 
 <div id="awards_container">
-<% awards.each do |award| %>
+<% awards.each_index do |award_index| %>
+  <% if award_index == 0 %>
+    <div id="favorite_awards"></div>
+    <hr>
+    <h2>Favorite Awards</h2>
+    <hr>
+  <% end %>
+
   <div class="award_content">
-    <h4><%= award.title %></h4>
-    <p><%= award.description %></p>
-    <% if (award.link.size != 0) %>
-      <%= link_to("[info]","#{award.link}", class: "link") %>
+    <h4><%= awards[award_index].title %></h4>
+    <p><%= awards[award_index].description %></p>
+    <% if (awards[award_index].link.size != 0) %>
+      <%= link_to("[info]","#{awards[award_index].link}", class: "link") %>
     <% end %>
     <hr>
   </div>
+
+  <% if award_index == 6 %>
+    <div id="other_awards"></div>
+    <h2>Other Awards</h2>
+    <hr>
+  <% end %>
 <% end %>
 </div>
+
+<aside id="awards_sidebar">
+  <li>
+    <a href="#favorite_awards">Fav</a>
+  </li>
+  <li>
+    <a href="#other_awards">Other</a>
+  </li>
+</aside>
