@@ -1,4 +1,8 @@
-// Contact page stylesheet
+// Author: Gail Chen
+// Created: 6/20
+// Edit: N/A
+// Description: Styling for the contact information page. Since the informations
+// are short, we want to center everything on this page and having headings aligned .
 .center {
   margin: 0px auto;
   display: table;
@@ -22,6 +26,7 @@
   display: table-cell;
 }
 
+//Set the logo size and center the links
 #info-links img {
   height: 1em;
   width: 1em; }
@@ -29,6 +34,7 @@
 #info-links p {
   text-align: center; }
 
+// Set the style of slider for showing photos
 .slider {
   width: 550px;
   position: relative;
