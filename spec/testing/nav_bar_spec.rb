@@ -8,6 +8,7 @@
 
 require_relative '../spec_helper'
 
+# Test Navigation bar on the home page
 describe 'index', :type => :feature do
   before do
     visit '/'
@@ -35,5 +36,34 @@ describe 'index', :type => :feature do
       expect(page).to have_link 'Projects', :href=>'lab.html#project_nav'
     end
   end
+end
 
+# Test Navigation bar on the lab page
+describe 'lab', :type => :feature do
+  before do
+    visit '/lab.html'
+  end
+
+  it 'has a navigation bar' do
+    expect(page).to have_selector 'div.navbar'
+    within 'div.navbar' do
+      expect(page).to have_selector 'nav'
+      expect(page).to have_selector 'a', :count => 7
+      expect(page).to have_link 'Home', :href=>'index.html'
+      expect(page).to have_link 'Publications', :href=>'publication.html'
+      expect(page).to have_link 'Awards', :href=>'awards.html'
+      expect(page).to have_link 'Contact', :href=>'contact.html'
+      expect(page).to have_selector 'div.dropdown-content'
+    end
+  end
+
+  it 'has a dropdown menu' do
+    expect(page).to have_selector 'div.dropdown-content'
+    within 'div.dropdown-content' do
+      expect(page).to have_selector 'a', :count => 3
+      expect(page).to have_link 'Lab', :href=>'lab.html'
+      expect(page).to have_link 'People', :href=>'lab.html#people_nav'
+      expect(page).to have_link 'Projects', :href=>'lab.html#project_nav'
+    end
+  end
 end
