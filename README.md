@@ -97,5 +97,6 @@ Gail:
   * updates to css and erb files to remove hard coding
   * updates to documentation and README
 * July 25th:
-  * check validity
+  * checks validity of HTML and CSS, resolves errors
   * unit testing for each page
+  * finalizes
