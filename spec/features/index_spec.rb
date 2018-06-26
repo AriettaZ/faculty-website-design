@@ -1,10 +1,10 @@
 # Author: Ariel Zhu
 # Created: 6/25
-# Edit: 6/25 Gail add test plan
-# Test plan:
-# 1. Correct header
-# 2. Correct subheaders
-# 3. correct image
+# Edit: 6/25 Gail add test plan, checks image link
+# Test plan: Checks the webpage has the following elements:
+# 1. A header
+# 2. Two subheaders
+# 3. An image
 
 require_relative '../spec_helper'
 
@@ -32,7 +32,7 @@ describe 'index', :type => :feature do
   end
 
   it 'has a image' do
-    expect(page).to have_selector 'img'
+    expect(page).to have_selector 'img[src="images/cstewart.2018.jpg"]'
   end
 
 end
