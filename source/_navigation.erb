@@ -6,7 +6,7 @@
 -->
 <div class="navbar">
   <nav id="sitenav">
-    <a href="index.html"<%= current_page.data.title=="Christopher Stewart"? "class='active'><i class='fas fa-home'></i>":">" %>  Home</a>
+    <a href="index.html" <%= current_page.data.title=="Christopher Stewart"? "class='active'><i class='fas fa-home'></i>":">" %>  Home</a>
     <a href="publication.html" <%= current_page.data.title=="Publication"? "class='active'><i class='fas fa-book-open'></i>":">" %>   Publications</a>
     <a href="awards.html" <%= current_page.data.title=="Awards"? "class='active'><i class='fas fa-award'></i>":">" %>   Awards</a>
     <div class='dropdown<%= current_page.data.title=="Lab"? " active'><i class='fas fa-flask'></i>":"' >" %>

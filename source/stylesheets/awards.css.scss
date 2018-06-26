@@ -16,11 +16,11 @@
     top: 50%;
     margin-top: -170px;
     list-style-type: none;
-    li {
+    cursor: default;
+    div {
       height: 25px;
       width: 70px;
       text-align: center;
-      cursor: pointer;
       a {
         display: block;
         text-decoration: none;
@@ -28,12 +28,15 @@
         height: 100%;
       }
     }
-    li:hover a{
+    #awards_sidebar > div:nth-of-type(2),#awards_sidebar > div:nth-of-type(3){
+      cursor: pointer;
+    }
+    div:hover a{
       background-color: #ae190e;
       font-weight: bold;
       color: white;
     }
-    li:first-child {
+    div:first-child {
       background-color: #6d0f09;
       color: white;
       font-weight: bold;
@@ -47,10 +50,10 @@
   width: 92%;
   margin: auto;
 }
+
 .award_content hr{
-    border: 0;
-    border-bottom: 1px dashed #ffffff;
-    height: 0;
+    border: 1px dashed;
+    // height: 1;
 }
 
 #other_awards div:last-of-type hr, #favorite_awards div:last-of-type hr{
