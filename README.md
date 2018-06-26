@@ -63,7 +63,7 @@ Ariel:
 
 #### Testing
 ##### Test plans can be found under lib/testing, lib/system-testing and spec/testing
-###### To run spec testing cases, enter 'bundle exec rake' in the terminal
+##### To run spec testing cases, please enter 'bundle exec rake' in the terminal
 Mike:
 * unit_testing_publication_scraper.rb
 
