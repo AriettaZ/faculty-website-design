@@ -1,5 +1,6 @@
 //Author: Channing
 //Created: 6/20
+// Description: Styling the navigation
 //Edit: Mike 6/21 Clean structure, add hover effect, add positions
 //Edit: Ariel 6/23 add responsiveness
 .navbar {
@@ -33,7 +34,7 @@
 #sitenav li:hover,.active{
     cursor: pointer;
     background-color: #6d0f09;
-    font-weight: 1100;
+    font-weight: 900;
 }
 
 #sitenav li a {
@@ -60,7 +61,7 @@
 
 #sitenav .dropdown-content a:hover,#sitenav .dropdown-content a:active{
     background-color: #6d0f09;
-    font-weight: 1100;
+    font-weight: 900;
 }
 
 @media screen and (max-width: 840px) {

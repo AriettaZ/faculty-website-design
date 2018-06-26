@@ -43,6 +43,11 @@ describe 'contact', :type => :feature do
       expect(page).to have_selector 'input[type="radio"]', :count => 6
     end
     expect(page).to have_selector 'input[id="id1"][checked]'
+    expect(page).to have_no_selector 'input[id="id2"][checked]'
+    expect(page).to have_no_selector 'input[id="id3"][checked]'
+    expect(page).to have_no_selector 'input[id="id4"][checked]'
+    expect(page).to have_no_selector 'input[id="id5"][checked]'
+    expect(page).to have_no_selector 'input[id="id6"][checked]'
   end
 
   it 'has links' do

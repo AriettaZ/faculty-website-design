@@ -1,6 +1,7 @@
 //Author: Mike
 //Created: 6/20
 //Edit: N/A
+//Description: Styling the publication page
 
 #publication h1 {
     margin: 0 0 30px 0;
@@ -97,6 +98,6 @@ tr:last-child td {
 .anchor {
     display: block;
     height: 60px;
-    visibility: none;
+    visibility: hidden;
     margin-top: -60px;
 }
