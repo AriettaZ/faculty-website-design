@@ -21,17 +21,17 @@ The MAGiC team was tasked with redesigning a static web site. The site chosen wa
 ```
  $ bundle -v
 ```
-  If bundler were not already present, you would have to install it:
-```
- $ gem install bundler
- $ rbenv rehash # bookkeeping required by rbenv
-```
+    If bundler were not already present, you would have to install it:
+  ```
+   $ gem install bundler
+   $ rbenv rehash # bookkeeping required by rbenv
+  ```
 2. Install gems using Bundler:
 ```
  $ bundle install # installs gems and creates Gemfile.lock
  $ rbenv rehash # bookkeeping required by rbenv
 ```
-3. Choose one of the following method to run the application
+3. Choose one of the following methods to run the application
 
     - With build folder:
 
