@@ -6,6 +6,7 @@
 # 1. A header
 # 2. Two subheaders
 # 3. A sidebar with links to different sections of the awards page
+# 4. 45 awards
 
 require_relative '../spec_helper'
 
@@ -32,6 +33,13 @@ describe 'awards', :type => :feature do
     within '#awards_sidebar' do
       expect(page).to have_link "Favorite", :href=>"#favorite_awards_nav"
       expect(page).to have_link "Other", :href=>"#other_awards_nav"
+    end
+  end
+
+  it 'has the correct contents' do
+    within 'div.content-container' do
+      expect(page).to have_selector 'h4', :count => 45
+      expect(page).to have_selector 'p', :count => 45
     end
   end
 
