@@ -4,7 +4,7 @@ css: publication.css
 ---
 <!-- Author: Mike Lin
 Created: 6/20
-Edit: N/A
+Edit: 6/25 Gail modifiedy to pass validation test
 Description: Show publications in a table ordered by years. Each publication
 has a title, authors, a place of publication and links to the published
 articles, powerpoints, event's website and publication's bibtex.
@@ -21,15 +21,15 @@ articles, powerpoints, event's website and publication's bibtex.
 	<h1>Publications</h1>
 	<a href="https://www.cs.rutgers.edu/~ricardob/note.html" class="publication-standard">CS publishing standards</a>
 	<% data = Marshal.load File.read("data/publication_data") %>
-	<aside id="publication-year-sidebar">
+	<div id="publication-year-sidebar">
 		<% data.keys.each do |year| %>
-		<li>
+		<div>
 			<a href="#year-<%= year.to_s%>">
 				<%= year.to_s%>
 			</a>
-		</li>
+		</div>
 		<% end %>
-	</aside>
+	</div>
 
 	<% data.keys.each do |year| %>
 	<span id="year-<%= year.to_s %>" class="anchor"></span>
@@ -43,7 +43,7 @@ articles, powerpoints, event's website and publication's bibtex.
 			<th class="author">Author</th>
 			<th class="event">Event</th>
 			<th class="location">Location</th>
-			<th colspan="4" class="link">Link</th>
+			<th class="link">Link</th>
 		</tr>
 
 		<% data[year].each do |publication| %>
@@ -62,16 +62,16 @@ articles, powerpoints, event's website and publication's bibtex.
 			</td>
 			<td class="link">
 				<% if publication.pdf_link.strip.length!=0 %>
-				<a class="pdf" <%= 'href=' +publication.pdf_link%>>pdf</a><br />
+				<a class="pdf" href="<%=publication.pdf_link%>">pdf</a><br />
 				<% end %>
 				<% if publication.ppt_link.strip.length!=0 %>
-				<a class="ppt" <%= 'href=' +publication.ppt_link%>>ppt</a><br />
+				<a class="ppt" href="<%=publication.ppt_link%>">ppt</a><br />
 				<% end %>
 				<% if publication.bibtex_link.strip.length!=0 %>
-				<a class="bib" <%= 'href=' +publication.bibtex_link%>>bibtex</a><br />
+				<a class="bib" href="<%=publication.bibtex_link%>">bibtex</a><br />
 				<% end %>
 				<% if publication.event_link.strip.length!=0 %>
-				<a class="event" <%= 'href=' +publication.event_link%>>event</a>
+				<a class="event" href="<%=publication.event_link%>">event</a><br />
 				<% end %>
 			</td>
 		</tr>

@@ -21,10 +21,14 @@ describe 'contact', :type => :feature do
     expect(page).to have_selector('h1.photo' , :text => 'Press Photos')
   end
 
-  it 'has a list' do
+  it 'has the correct list' do
     expect(page).to have_selector 'ul.info'
     within 'ul.info' do
       expect(page).to have_selector "li", :count => 4
+      expect(page).to have_selector "li", :text => "Email: cstewart@cse.ohio-state.edu"
+      expect(page).to have_selector "li", :text => "Office: RM 793"
+      expect(page).to have_selector "li", :text => "Office phone: (614) 292-7325"
+      expect(page).to have_selector "li", :text => "Department of Computer Science and Engineering The Ohio State University 395 Dreese Lab"
     end
   end
 
@@ -39,20 +43,15 @@ describe 'contact', :type => :feature do
       expect(page).to have_selector 'input[type="radio"]', :count => 6
     end
     expect(page).to have_selector 'input[id="id1"][checked]'
-    expect(page).to have_selector 'input[id="id2"][unchecked]'
-    expect(page).to have_selector 'input[id="id3"][unchecked]'
-    expect(page).to have_selector 'input[id="id4"][unchecked]'
-    expect(page).to have_selector 'input[id="id5"][unchecked]'
-    expect(page).to have_selector 'input[id="id6"][unchecked]'
   end
 
   it 'has links' do
     within '#info-links' do
       expect(page).to have_selector 'a', :count => 4
-      page.find('a', :text=>'Google+').click
-      page.find('a', :text=>'Google Scholar').click
-      page.find('a', :text=>'Facebook').click
-      page.find('a', :src=>'Curriculum Vitae (out of date)').click
+      expect(page).to have_link "Google+", :href=>"https://plus.google.com/u/0/+ChristopherStewartPhD"
+      expect(page).to have_link "Google Scholar", :href=>"https://scholar.google.com/citations?user=iYgWtREAAAAJ&hl=en"
+      expect(page).to have_link "Facebook", :href=>"https://www.facebook.com/christopher.charles.stewart"
+      expect(page).to have_link "Curriculum Vitae (out of date)", :href =>"../data/cstewart.cv.pdf"
     end
   end
 

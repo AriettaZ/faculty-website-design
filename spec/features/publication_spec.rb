@@ -1,3 +1,12 @@
+# Author: Ariel Zhu
+# Created: 6/25
+# Edit: 6/25 Gail add more cases to test sidebar
+# Description: Test the publications page.
+# Test plan: Checks the webpage has the following elements:
+# 1. A header
+# 2. A sidebar with links to different sections of the awards page
+# 3. A table with correct data
+
 require_relative '../spec_helper'
 
 describe 'publication', :type => :feature do
@@ -14,10 +23,17 @@ describe 'publication', :type => :feature do
 
   it 'has the correct sidebar' do
     expect(page).to have_selector '#publication-year-sidebar'
+    within '#publication-year-sidebar' do
+      expect(page).to have_link "2018", :href=>"#year-2018"
+      expect(page).to have_link "2014", :href=>"#year-2014"
+      expect(page).to have_link "2010", :href=>"#year-2010"
+      expect(page).to have_link "2004", :href=>"#year-2004"
+    end
   end
 
   it 'has the correct table' do
     expect(page).to have_css("table", :count => 15)
+    expect(page).to have_css("tr", :count => 79)
     expect(page).to have_css("a.pdf", :count => 58)
     expect(page).to have_css("a.ppt", :count => 40)
     expect(page).to have_css("a.bib", :count => 64)

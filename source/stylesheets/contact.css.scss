@@ -86,3 +86,8 @@
 
 .slider input[name='slide_switch']:checked + label + img {
   visibility: visible; }
+
+// Set the frame for displaying the maps
+iframe{
+  frameborder: 0
+}

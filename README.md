@@ -97,3 +97,6 @@ Gail:
   * unit testing by all members
   * updates to css and erb files to remove hard coding
   * updates to documentation and README
+* July 25th:
+  * check validity
+  * unit testing for each page

@@ -1,6 +1,7 @@
 # Author: Ariel Zhu
 # Created: 6/25
 # Edit: 6/25 Gail add test plan, checks image link
+# Description: Test the home page.
 # Test plan: Checks the webpage has the following elements:
 # 1. A header
 # 2. Two subheaders

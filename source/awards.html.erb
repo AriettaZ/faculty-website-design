@@ -20,9 +20,9 @@ css: awards.css
 <% awards.each_index do |award_index| %>
 
   <% if award_index == 0 %>
-    <div id="favorite_awards"></div>
+    <div id="favorite_awards">
     <hr>
-    <h2>Favorite Awards</h2>
+    <h2>Favorite Awards</h2></div>
     <hr>
   <% end %>
 
@@ -36,8 +36,9 @@ css: awards.css
   </div>
 
   <% if award_index == 6 %>
-    <div id="other_awards"></div>
+    <div id="other_awards">
     <h2>Other Awards</h2>
+    </div>
     <hr>
   <% end %>
 <% end %>

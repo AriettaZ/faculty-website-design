@@ -371,6 +371,10 @@
 
 }
 
+.iframe {
+  frameborder: 0;
+}
+
 // when screen is smaller than 850px
 @media screen and (max-width: 850px) {
   .navtab label,

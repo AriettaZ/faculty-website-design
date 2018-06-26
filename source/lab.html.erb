@@ -15,7 +15,7 @@ Description:.ReRout overview, people list and project introduction -->
 <div class="lab_overview" id="overview">
   <h1>ReRout Lab Overview</h1>
   <div class="lab_intro">
-    <%= tag :img, :src => "images/rerout-sg.jpg" %>
+    <%= tag :img, :src => "images/rerout-sg.jpg", :alt => "image not available" %>
     <p>The ReRout Lab uses computer systems research to broaden participation in computer science.  Our premise is that novel, high-impact systems excite students, reach new classes of users, and demand diverse, out-of-the-box thinking. </p>
   </div>
   <div class="guild_list" >
@@ -35,7 +35,7 @@ Description:.ReRout overview, people list and project introduction -->
     <h1><i class="fas fa-users"></i>  People</h1>
     <div class="select_list">
       <label for="phdStudent" tabindex="0"></label>
-      <input id="phdStudent" type="radio" name="group" checked="true" aria-hidden="true">
+      <input id="phdStudent" type="radio" name="group" checked aria-hidden="true">
       <p><span>PHD Students  </span></p>
       <div class="phdStudent student_info">
         <% data.student.phdStudent.each do |student| %>
@@ -78,10 +78,10 @@ Description:.ReRout overview, people list and project introduction -->
   <h1><i class="fas fa-folder"></i> Projects</h1>
   <div class="navtab">
     <label for="project1" tabindex="0"></label>
-    <input id="project1" type="radio" name="project" checked="true" aria-hidden="true">
+    <input id="project1" type="radio" name="project" checked aria-hidden="true">
     <p>Greening as a Service</p>
     <div>
-      <%= tag :img, :src => "images/mantismail.png" %>
+      <%= tag :img, :src => "images/mantismail.png", :alt => "image not available" %>
       <h2>Greening as a Service</h2>
       <p>(Supported by: NSF CSR SMALL )</p>
       <p>(Collaborators: Microsoft Research, Oak Ridge National Labs, Morehouse College, NCWIT, OSU Office of Diversity and Inclusion ) </p>
@@ -147,7 +147,7 @@ Description:.ReRout overview, people list and project introduction -->
       <p><a href="http://web.cse.ohio-state.edu/~stewart.962/Papers/kelleyladis13.pdf">Cache Provisioning for Interactive NLP Services, LADiS 2013 </a></p>
       <p><a href="http://web.cse.ohio-state.edu/~stewart.962/Papers/kelleydcperf13.pdf">Balanced and Predictable Networked Storage, DCPerf 2013</a></p>
       <h3>Media and Press Release:</h3>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/eiA5Uo1uJHI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/eiA5Uo1uJHI" allowfullscreen></iframe>
       <p>Outreach Event:  We recently brought middle school students participating in Camp Engineer to the ReRout Labs for a friendly Jeopardy match.  The middle schools students competed againt our Open Ephyra system (Open Ephyra is a question answering system like IBM Watson).  The Youtube video to the left summarizes the event and unveils the winner.</p>
       </div>
 </div>
