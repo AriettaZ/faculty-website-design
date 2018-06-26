@@ -30,8 +30,8 @@ describe 'awards', :type => :feature do
   it 'has the correct sidebar' do
     expect(page).to have_selector '#awards_sidebar'
     within '#awards_sidebar' do
-      expect(page).to have_link "Favorite", :href=>"#favorite_awards"
-      expect(page).to have_link "Other", :href=>"#other_awards"
+      expect(page).to have_link "Favorite", :href=>"#favorite_awards_nav"
+      expect(page).to have_link "Other", :href=>"#other_awards_nav"
     end
   end
 

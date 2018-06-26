@@ -21,7 +21,7 @@ describe 'contact', :type => :feature do
     expect(page).to have_selector('h1.photo' , :text => 'Press Photos')
   end
 
-  it 'has the correct list' do
+  it 'has a list' do
     expect(page).to have_selector 'ul.info'
     within 'ul.info' do
       expect(page).to have_selector "li", :count => 4

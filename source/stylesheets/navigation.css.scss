@@ -15,13 +15,13 @@
 }
 
 
-.navbar ul {
+.navbar nav {
     list-style-type: none;
     margin: 0 auto;
     width: 70%;
 }
 
-#sitenav li {
+#sitenav > a, #sitenav > div {
     display: block;
     float: left;
     height: 45px;
@@ -31,13 +31,14 @@
     color: white;
 }
 
-#sitenav li:hover,.active{
+#sitenav  a:hover, #sitenav  a.active, #sitenav .dropdown-content a:hover ,#sitenav .dropdown-content a.active{
     cursor: pointer;
     background-color: #6d0f09;
-    font-weight: 900;
+    text-shadow: 2px 0 #6d0f09;
+    font-weight:bold;
 }
 
-#sitenav li a {
+#sitenav  a, #sitenav > div {
     color: white;
     text-align: center;
     text-decoration: none;
@@ -59,13 +60,8 @@
     font-weight: normal;
 }
 
-#sitenav .dropdown-content a:hover,#sitenav .dropdown-content a:active{
-    background-color: #6d0f09;
-    font-weight: 900;
-}
-
 @media screen and (max-width: 840px) {
-  .navbar ul{
+  .navbar nav{
     width: 100%;
     padding: 0px;
   }
