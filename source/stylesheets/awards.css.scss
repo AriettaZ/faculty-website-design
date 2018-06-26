@@ -39,3 +39,20 @@
       font-weight: bold;
     }
 }
+
+#awards_heading h1{
+ padding-bottom:8px;
+}
+.award_content{
+  width: 92%;
+  margin: auto;
+}
+.award_content hr{
+    border: 0;
+    border-bottom: 1px dashed #ffffff;
+    height: 0;
+}
+
+#other_awards div:last-of-type hr, #favorite_awards div:last-of-type hr{
+  display: none;
+}

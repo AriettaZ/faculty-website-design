@@ -46,3 +46,10 @@ h1,h2,h3,h4{
 table{
   font-family: 'Roboto Condensed', sans-serif;
 }
+
+hr{
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
