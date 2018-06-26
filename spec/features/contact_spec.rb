@@ -20,6 +20,10 @@ describe 'contact', :type => :feature do
     expect(page).to have_selector('h1.photo' , :text => 'Press Photos')
   end
 
+  it 'has a image' do
+    expect(page).to have_selector 'img'
+  end
+  
   it 'has a list' do
     expect(page).to have_selector 'ul.info'
     within 'ul.info' do

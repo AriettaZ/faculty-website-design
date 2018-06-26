@@ -39,7 +39,7 @@ Description:.ReRout overview, people list and project introduction -->
       <p><span>PHD Students  </span></p>
       <div class="phdStudent student_info">
         <% data.student.phdStudent.each do |student| %>
-        <p><strong><%= student["name"] %></strong>, <a href='<%= student["page"]  %>'>webpage</a></p>
+        <p><strong class="student_name"><%= student["name"] %></strong>, <a href='<%= student["page"]  %>'>webpage</a></p>
           <p><%= student["intro"] %></p>
         <% end %>
       </div>
@@ -49,7 +49,7 @@ Description:.ReRout overview, people list and project introduction -->
       <p><span>Master Students  </span></p>
       <div class="masterStudent student_info">
           <% data.student.masterStudent.each do |student| %>
-          <p><strong><%= student["name"] %></strong>, <span><%= student["intro"] %></span></p>
+          <p><strong class="student_name"><%= student["name"] %></strong>, <span><%= student["intro"] %></span></p>
           <% end %>
       </div>
 
@@ -58,7 +58,7 @@ Description:.ReRout overview, people list and project introduction -->
       <p><span>Undergraduate Students  </span></p>
       <div class="undergdStudent student_info">
         <% data.student.undergdStudent.each do |student| %>
-        <p><strong><%= student["name"] %></strong>, <span><%= student["intro"] %></span></p>
+        <p><strong class="student_name"><%= student["name"] %></strong>, <span><%= student["intro"] %></span></p>
         <% end %>
       </div>
 
@@ -67,7 +67,7 @@ Description:.ReRout overview, people list and project introduction -->
       <p id="project_nav"><span>Summer Interns  </span></p>
       <div class="intern student_info">
         <% data.student.internStudent.each do |student| %>
-        <p><strong><%= student["name"] %></strong>, <span><%= student["intro"] %></span></p>
+        <p><strong class="student_name"><%= student["name"] %></strong>, <span><%= student["intro"] %></span></p>
         <% end %>
       </div>
   </div>
@@ -80,12 +80,12 @@ Description:.ReRout overview, people list and project introduction -->
     <label for="project1" tabindex="0"></label>
     <input id="project1" type="radio" name="project" checked="true" aria-hidden="true">
     <p>Greening as a Service</p>
-    <div>
+    <div class="project1">
       <%= tag :img, :src => "images/mantismail.png" %>
       <h2>Greening as a Service</h2>
       <p>(Supported by: NSF CSR SMALL )</p>
       <p>(Collaborators: Microsoft Research, Oak Ridge National Labs, Morehouse College, NCWIT, OSU Office of Diversity and Inclusion ) </p>
-      <h2>Research Challenge:</h2>
+      <h3>Research Challenge:</h2>
       <p>
         Internet services that provide search, e-commerce, and social networking have changed the world, but their growing carbon footprint is a concern.  By 2020, the annual carbon footprint of hosting centers worldwide is expected to exceed the footprint of the Netherlands.  Massive carbon footprints contribute to climate change and could lead to costly, punitive regulations.  Our research attempts to slow the growth of carbon footprints by moving Internet services to clean energy.  The challenge is that, as of today, most sources of clean energy are more expensive per joule than dirty sources.
 
