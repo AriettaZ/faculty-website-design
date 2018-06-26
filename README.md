@@ -12,7 +12,7 @@
 ***
 
 ## Overview
-The MAGiC team was tasked with redesigning a static web site. The site chosen was Professor Stewart's [website](http://web.cse.ohio-state.edu/~stewart.962/). The team used Middleman framework(https://middlemanapp.com/basics/directory-structure/) during the development process. The website is not fully dynamic when viewport is under 850px; thus a larger window size is recommended.
+The MAGiC team was tasked with redesigning a static web site. The site chosen was Professor Stewart's [website](http://web.cse.ohio-state.edu/~stewart.962/). The app is equipped with Middleman framework (https://middlemanapp.com). The website is not fully dynamic when viewport is under 850px; thus a larger window size is recommended.
 
 
 ## Instructions
