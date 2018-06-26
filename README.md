@@ -35,21 +35,21 @@ The MAGiC team was tasked with redesigning a static web site. The site chosen wa
 
     - With build folder:
 
-      - Create static files for each file located in your source folder.
-      ```
-        $ bundle exec middleman build
-      ```
-      - Open the *build* folder inside the main project folder.
+        - Create static files for each file located in your source folder.
+        ```
+          $ bundle exec middleman build
+        ```
+        - Open the *build* folder inside the main project folder.
 
-      - Open the *index.html* page in Firefox.
+        - Open the *index.html* page in Firefox.
 
-  - With middleman server:
-    - start the preview web-server
+   - With middleman server:
+        - start the preview web-server
 
-      ```
-        $ bundle exec middleman server
-      ```
-    - Open  *localhost:4567* in Firefox.
+        ```
+          $ bundle exec middleman server
+        ```
+        - Open  *localhost:4567* in Firefox.
 
 
 
@@ -61,7 +61,7 @@ The MAGiC team was tasked with redesigning a static web site. The site chosen wa
 
 ***
 
-### Team
+## Team
 | Role|Team Member|
 | ------------- |-------------|
 | Overall Project Manager|Gail Chen|
@@ -73,8 +73,8 @@ The MAGiC team was tasked with redesigning a static web site. The site chosen wa
 
 ***
 
-### Individual Contributions
-#### Development
+## Individual Contributions
+### Development
 Mike:
 * scraper.rb
 * publication_scraper.rb
@@ -107,8 +107,8 @@ Ariel:
 * README.md
 
 
-#### Testing
-##### Test plans can be found under lib/testing, lib/system-testing and spec/testing
+### Testing
+#### Test plans can be found under lib/testing, lib/system-testing and spec/testing
 Mike:
 * unit_testing_publication_scraper.rb
 
@@ -125,9 +125,9 @@ Gail:
 * unit testing contact page
 * unit testing awards page
 
-##### System testing conducted by all members
+#### System testing conducted by all members
 
-#### Meetings
+### Meetings
 
 * July 19th:
   * Stewart's page is chosen to be redesigned
