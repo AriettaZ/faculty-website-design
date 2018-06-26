@@ -17,22 +17,25 @@ The MAGiC team was tasked with redesigning a static web site. The site chosen wa
 
 ## Instructions
 ### To view the redesigned website:
+
 1. Enter the following command in the terminal to check if you already have Bundler installed:
   ```
    $ bundle -v
   ```
 
-If bundler were not already present, you would have to install it:
+  If bundler were not already present, you would have to install it:
 
   ```
    $ gem install bundler
    $ rbenv rehash # bookkeeping required by rbenv
   ```
 2. Install gems using Bundler:
-```
- $ bundle install # installs gems and creates Gemfile.lock
- $ rbenv rehash # bookkeeping required by rbenv
-```
+
+  ```
+   $ bundle install # installs gems and creates Gemfile.lock
+   $ rbenv rehash # bookkeeping required by rbenv
+  ```
+
 3. Choose one of the following methods to run the application
 
     - With build folder:
