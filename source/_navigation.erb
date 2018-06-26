@@ -5,18 +5,18 @@
   Edit: 6/23 Ariel add icons and background for active nav element
 -->
 <div class="navbar">
-  <ul id="sitenav">
-    <a href="index.html"><li <%= current_page.data.title=="Christopher Stewart"? "class='active'><i class='fas fa-home'></i>":">" %>  Home</li></a>
-    <a href="publication.html"><li <%= current_page.data.title=="Publication"? "class='active'><i class='fas fa-book-open'></i>":">" %>   Publications</li></a>
-    <a href="awards.html"><li <%= current_page.data.title=="Awards"? "class='active'><i class='fas fa-award'></i>":">" %>   Awards</li></a></li>
-    <li <%= current_page.data.title=="Lab"? "class='dropdown active'><i class='fas fa-flask'></i>":" class='dropdown' >" %>
+  <nav id="sitenav">
+    <a href="index.html"<%= current_page.data.title=="Christopher Stewart"? "class='active'><i class='fas fa-home'></i>":">" %>  Home</a>
+    <a href="publication.html" <%= current_page.data.title=="Publication"? "class='active'><i class='fas fa-book-open'></i>":">" %>   Publications</li></a>
+    <a href="awards.html" <%= current_page.data.title=="Awards"? "class='active'><i class='fas fa-award'></i>":">" %>   Awards</a>
+    <div class='dropdown<%= current_page.data.title=="Lab"? " active'><i class='fas fa-flask'></i>":"' >" %>
       Lab
       <div class="dropdown-content">
         <a href="lab.html" <%= current_page.data.title=="Lab"? "class='active'><i class='fas fa-flask'></i>":">" %>    Lab</a>
         <a href="lab.html#people_nav">   People</a>
         <a href="lab.html#project_nav">    Projects</a>
       </div>
-    </li>
-    <a href="contact.html"><li <%= current_page.data.title=="Contact Information"? "class='active'><i class='fas fa-envelope'></i>":">" %>  Contact</li></a>
-  </ul>
+    </div>
+    <a href="contact.html" <%= current_page.data.title=="Contact Information"? "class='active'><i class='fas fa-envelope'></i>":">" %>  Contact</a>
+  </nav>
 </div>
